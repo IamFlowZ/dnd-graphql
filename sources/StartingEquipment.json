@@ -1,0 +1,847 @@
+[{
+	
+	"class": {
+		
+		"name": "Barbarian"
+	},
+	"starting_equipment": [{
+		"item": {  "name": "Explorer's Pack"}, "quantity": 1}, {
+		"item": {  "name": "Javelin"}, "quantity": 4}],
+	"choices_to_make": 2,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Greataxe"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Battleaxe"}, "quantity": 1}, {
+			"item": {  "name": "Flail"}, "quantity": 1}, {
+			"item": {  "name": "Glaive"}, "quantity": 1}, {
+			"item": {  "name": "Greataxe"}, "quantity": 1}, {
+			"item": {  "name": "Greatsword"}, "quantity": 1}, {
+			"item": {  "name": "Halberd"}, "quantity": 1}, {
+			"item": {  "name": "Lance"}, "quantity": 1}, {
+			"item": {  "name": "Longsword"}, "quantity": 1}, {
+			"item": {  "name": "Maul"}, "quantity": 1}, {
+			"item": {  "name": "Morningstar"}, "quantity": 1}, {
+			"item": {  "name": "Pike"}, "quantity": 1}, {
+			"item": {  "name": "Rapier"}, "quantity": 1}, {
+			"item": {  "name": "Scimitar"}, "quantity": 1}, {
+			"item": {  "name": "Shortsword"}, "quantity": 1}, {
+			"item": {  "name": "Trident"}, "quantity": 1}, {
+			"item": {  "name": "War pick"}, "quantity": 1}, {
+			"item": {  "name": "Warhammer"}, "quantity": 1}, {
+			"item": {  "name": "Whip"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Handaxe"}, "quantity": 2}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Bard"
+	},
+	"starting_equipment": [{
+		"item": {  "name": "Leather"}, "quantity": 1}, {
+		"item": {  "name": "Dagger"}, "quantity": 1}],
+	"choices_to_make": 3,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Rapier"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Longsword"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Diplomat's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Entertainer's Pack"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Lute"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Bagpipes"}, "quantity": 1}, {
+			"item": {  "name": "Drum"}, "quantity": 1}, {
+			"item": {  "name": "Dulcimer"}, "quantity": 1}, {
+			"item": {  "name": "Flute"}, "quantity": 1}, {
+			"item": {  "name": "Lute"}, "quantity": 1}, {
+			"item": {  "name": "Lyre"}, "quantity": 1}, {
+			"item": {  "name": "Horn"}, "quantity": 1}, {
+			"item": {  "name": "Pan flute"}, "quantity": 1}, {
+			"item": {  "name": "Shawm"}, "quantity": 1}, {
+			"item": {  "name": "Viol"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Cleric"
+	},
+	"starting_equipment": [{
+	"item": {  "name": "Shield"}, "quantity": 1}],
+	"choices_to_make": 5,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Mace" },"quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Warhammer" }, "quantity": 1,
+			"prerequisites": [{
+				"type": "proficiency",
+				"proficiency": {  "name": "Warhammers" }
+			}]
+		}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Scale Mail"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Leather"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Chain Mail"}, "quantity": 1,	"prerequisites": [{
+				"type": "proficiency",
+				"proficiency":{  "name": "Chain Mail" }
+			}]
+		}]
+	}],
+	"choice_3": [{
+		"choose": 2,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow bolt"}, "quantity": 20}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	"choice_4": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Priest's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
+	}],
+	"choice_5": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Amulet"}, "quantity": 1}, {
+			"item": {  "name": "Emblem"}, "quantity": 1}, {
+			"item": {  "name": "Reliquary"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Druid"
+	},
+	"starting_equipment": [{
+		"item": {  "name": "Leather"}, "quantity": 1}, {
+		"item": {  "name": "Explorer's Pack"}, "quantity": 1}],
+	"choices_to_make": 3,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Shield"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Scimitar"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Sprig of mistletoe"}, "quantity": 1}, {
+			"item": {  "name": "Totem"}, "quantity": 1}, {
+			"item": {  "name": "Wooden staff"}, "quantity": 1}, {
+			"item": {  "name": "Yew wand"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Fighter"
+	},
+"starting_equipment": [],
+	"choices_to_make": 5,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Chain Mail"}, "quantity": 1}]
+	}, {
+		"choose": 3,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Leather"}, "quantity": 1}, {
+			"item": {  "name": "Longbow"}, "quantity": 1}, {
+			"item": {  "name": "Arrow"}, "quantity": 20}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+		"item": {  "name": "Shield"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Battleaxe"}, "quantity": 1}, {
+			"item": {  "name": "Flail"}, "quantity": 1}, {
+			"item": {  "name": "Glaive"}, "quantity": 1}, {
+			"item": {  "name": "Greataxe"}, "quantity": 1}, {
+			"item": {  "name": "Greatsword"}, "quantity": 1}, {
+			"item": {  "name": "Halberd"}, "quantity": 1}, {
+			"item": {  "name": "Lance"}, "quantity": 1}, {
+			"item": {  "name": "Longsword"}, "quantity": 1}, {
+			"item": {  "name": "Maul"}, "quantity": 1}, {
+			"item": {  "name": "Morningstar"}, "quantity": 1}, {
+			"item": {  "name": "Pike"}, "quantity": 1}, {
+			"item": {  "name": "Rapier"}, "quantity": 1}, {
+			"item": {  "name": "Scimitar"}, "quantity": 1}, {
+			"item": {  "name": "Shortsword"}, "quantity": 1}, {
+			"item": {  "name": "Trident"}, "quantity": 1}, {
+			"item": {  "name": "War pick"}, "quantity": 1}, {
+			"item": {  "name": "Warhammer"}, "quantity": 1}, {
+			"item": {  "name": "Whip"}, "quantity": 1}, {
+			"item": {  "name": "Blowgun"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, hand"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, heavy"}, "quantity": 1}, {
+			"item": {  "name": "Longbow"}, "quantity": 1}, {
+			"item": {  "name": "Net"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 2,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow bolt"}, "quantity": 20}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Handaxe"}, "quantity": 2}]
+	}],
+	"choice_4": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
+	}],
+	"choice_5": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Battleaxe"}, "quantity": 1}, {
+			"item": {  "name": "Flail"}, "quantity": 1}, {
+			"item": {  "name": "Glaive"}, "quantity": 1}, {
+			"item": {  "name": "Greataxe"}, "quantity": 1}, {
+			"item": {  "name": "Greatsword"}, "quantity": 1}, {
+			"item": {  "name": "Halberd"}, "quantity": 1}, {
+			"item": {  "name": "Lance"}, "quantity": 1}, {
+			"item": {  "name": "Longsword"}, "quantity": 1}, {
+			"item": {  "name": "Maul"}, "quantity": 1}, {
+			"item": {  "name": "Morningstar"}, "quantity": 1}, {
+			"item": {  "name": "Pike"}, "quantity": 1}, {
+			"item": {  "name": "Rapier"}, "quantity": 1}, {
+			"item": {  "name": "Scimitar"}, "quantity": 1}, {
+			"item": {  "name": "Shortsword"}, "quantity": 1}, {
+			"item": {  "name": "Trident"}, "quantity": 1}, {
+			"item": {  "name": "War pick"}, "quantity": 1}, {
+			"item": {  "name": "Warhammer"}, "quantity": 1}, {
+			"item": {  "name": "Whip"}, "quantity": 1}, {
+			"item": {  "name": "Blowgun"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, hand"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, heavy"}, "quantity": 1}, {
+			"item": {  "name": "Longbow"}, "quantity": 1}, {
+			"item": {  "name": "Net"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Monk"
+	},
+	"starting_equipment": [{
+	"item": {  "name": "Dart"}, "quantity": 10}],
+	"choices_to_make": 2,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Shortsword"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Paladin"
+	},
+	"starting_equipment": [{
+	"item": {  "name": "Chain Mail"}, "quantity": 1}],
+	"choices_to_make": 5,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+		"item": {  "name": "Shield"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Battleaxe"}, "quantity": 1}, {
+			"item": {  "name": "Flail"}, "quantity": 1}, {
+			"item": {  "name": "Glaive"}, "quantity": 1}, {
+			"item": {  "name": "Greataxe"}, "quantity": 1}, {
+			"item": {  "name": "Greatsword"}, "quantity": 1}, {
+			"item": {  "name": "Halberd"}, "quantity": 1}, {
+			"item": {  "name": "Lance"}, "quantity": 1}, {
+			"item": {  "name": "Longsword"}, "quantity": 1}, {
+			"item": {  "name": "Maul"}, "quantity": 1}, {
+			"item": {  "name": "Morningstar"}, "quantity": 1}, {
+			"item": {  "name": "Pike"}, "quantity": 1}, {
+			"item": {  "name": "Rapier"}, "quantity": 1}, {
+			"item": {  "name": "Scimitar"}, "quantity": 1}, {
+			"item": {  "name": "Shortsword"}, "quantity": 1}, {
+			"item": {  "name": "Trident"}, "quantity": 1}, {
+			"item": {  "name": "War pick"}, "quantity": 1}, {
+			"item": {  "name": "Warhammer"}, "quantity": 1}, {
+			"item": {  "name": "Whip"}, "quantity": 1}, {
+			"item": {  "name": "Blowgun"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, hand"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, heavy"}, "quantity": 1}, {
+			"item": {  "name": "Longbow"}, "quantity": 1}, {
+			"item": {  "name": "Net"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Javelin"}, "quantity": 5}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Priest's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
+	}],
+	"choice_4": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Amulet"}, "quantity": 1}, {
+			"item": {  "name": "Emblem"}, "quantity": 1}, {
+			"item": {  "name": "Reliquary"}, "quantity": 1}]
+	}],
+	"choice_5": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Battleaxe"}, "quantity": 1}, {
+			"item": {  "name": "Flail"}, "quantity": 1}, {
+			"item": {  "name": "Glaive"}, "quantity": 1}, {
+			"item": {  "name": "Greataxe"}, "quantity": 1}, {
+			"item": {  "name": "Greatsword"}, "quantity": 1}, {
+			"item": {  "name": "Halberd"}, "quantity": 1}, {
+			"item": {  "name": "Lance"}, "quantity": 1}, {
+			"item": {  "name": "Longsword"}, "quantity": 1}, {
+			"item": {  "name": "Maul"}, "quantity": 1}, {
+			"item": {  "name": "Morningstar"}, "quantity": 1}, {
+			"item": {  "name": "Pike"}, "quantity": 1}, {
+			"item": {  "name": "Rapier"}, "quantity": 1}, {
+			"item": {  "name": "Scimitar"}, "quantity": 1}, {
+			"item": {  "name": "Shortsword"}, "quantity": 1}, {
+			"item": {  "name": "Trident"}, "quantity": 1}, {
+			"item": {  "name": "War pick"}, "quantity": 1}, {
+			"item": {  "name": "Warhammer"}, "quantity": 1}, {
+			"item": {  "name": "Whip"}, "quantity": 1}, {
+			"item": {  "name": "Blowgun"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, hand"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, heavy"}, "quantity": 1}, {
+			"item": {  "name": "Longbow"}, "quantity": 1}, {
+			"item": {  "name": "Net"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Ranger"
+	},
+	"starting_equipment": [{
+		"item": {  "name": "Longbow"}, "quantity": 1}, {
+		"item": {  "name": "Arrow"}, "quantity": 20}],
+	"choices_to_make": 3,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Scale Mail"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Leather"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Shortsword"}, "quantity": 2}]
+	}, {
+		"choose": 2,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Rogue"
+	},
+	"starting_equipment": [{
+		"item": {  "name": "Leather"}, "quantity": 1}, {
+		"item": {  "name": "Dagger"}, "quantity": 2}, {
+		"item": {  "name": "Thieves' tools"}, "quantity": 1}],
+	"choices_to_make": 3,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Rapier"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Shortsword"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 2,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Arrow"}, "quantity": 20}]
+	}, {
+		"choose": 2,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Shortsword"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Burglar's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Sorcerer"
+	},
+	"starting_equipment": [{
+	"item": {  "name": "Dagger"}, "quantity": 2}],
+	"choices_to_make": 3,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow bolt"}, "quantity": 20}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Component pouch"}, "quantity": 2}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Crystal"}, "quantity": 1}, {
+			"item": {  "name": "Orb"}, "quantity": 1}, {
+			"item": {  "name": "Rod"}, "quantity": 1}, {
+			"item": {  "name": "Staff"}, "quantity": 1}, {
+			"item": {  "name": "Wand"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Warlock"
+	},
+	"starting_equipment": [{
+		"item": {  "name": "Dagger"}, "quantity": 2}, {
+		"item": {  "name": "Leather"}, "quantity": 1}],
+	"choices_to_make": 4,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow bolt"}, "quantity": 20}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Component pouch"}, "quantity": 2}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Crystal"}, "quantity": 1}, {
+			"item": {  "name": "Orb"}, "quantity": 1}, {
+			"item": {  "name": "Rod"}, "quantity": 1}, {
+			"item": {  "name": "Staff"}, "quantity": 1}, {
+			"item": {  "name": "Wand"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Scholar's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
+	}],
+	"choice_4": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Club"}, "quantity": 1}, {
+			"item": {  "name": "Dagger"}, "quantity": 1}, {
+			"item": {  "name": "Greatclub"}, "quantity": 1}, {
+			"item": {  "name": "Handaxe"}, "quantity": 1}, {
+			"item": {  "name": "Javelin"}, "quantity": 1}, {
+			"item": {  "name": "Light hammer"}, "quantity": 1}, {
+			"item": {  "name": "Mace"}, "quantity": 1}, {
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}, {
+			"item": {  "name": "Sickle"}, "quantity": 1}, {
+			"item": {  "name": "Spear"}, "quantity": 1}, {
+			"item": {  "name": "Crossbow, light"}, "quantity": 1}, {
+			"item": {  "name": "Dart"}, "quantity": 1}, {
+			"item": {  "name": "Shortbow"}, "quantity": 1}, {
+			"item": {  "name": "Sling"}, "quantity": 1}]
+	}],
+	
+}, {
+	
+	"class": {
+		
+		"name": "Wizard"
+	},
+	"starting_equipment": [{
+	"item": {  "name": "Spellbook"}, "quantity": 1}],
+	"choices_to_make": 3,
+	"choice_1": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dagger"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Quarterstaff"}, "quantity": 1}]
+	}],
+	"choice_2": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Component pouch"}, "quantity": 2}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Crystal"}, "quantity": 1}, {
+			"item": {  "name": "Orb"}, "quantity": 1}, {
+			"item": {  "name": "Rod"}, "quantity": 1}, {
+			"item": {  "name": "Staff"}, "quantity": 1}, {
+			"item": {  "name": "Wand"}, "quantity": 1}]
+	}],
+	"choice_3": [{
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Scholar's Pack"}, "quantity": 1}]
+	}, {
+		"choose": 1,
+		"type": "equipment",
+		"from": [{
+			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
+	}],
+	
+}]

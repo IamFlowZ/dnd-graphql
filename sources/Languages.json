@@ -1,0 +1,129 @@
+[
+  {
+    
+    "name": "Common",
+    "type": "Standard",
+    "typical_speakers": ["Humans"],
+    "script": "Common"
+    
+  },
+  {
+    
+    "name": "Dwarvish",
+    "type": "Standard",
+    "typical_speakers": ["Dwarves"],
+    "script": "Dwarvish"
+    
+  },
+  {
+    
+    "name": "Elvish",
+    "type": "Standard",
+    "typical_speakers": ["Elves"],
+    "script": "Elvish"
+    
+  },
+  {
+    
+    "name": "Giant",
+    "type": "Standard",
+    "typical_speakers": ["Ogres", "Giants"],
+    "script": "Dwarvish"
+    
+  },
+  {
+    
+    "name": "Gnomish",
+    "type": "Standard",
+    "typical_speakers": ["Gnomes"],
+    "script": "Dwarvish"
+    
+  },
+  {
+    
+    "name": "Goblin",
+    "type": "Standard",
+    "typical_speakers": ["Goblinoids"],
+    "script": "Dwarvish"
+    
+  },
+  {
+    
+    "name": "Halfling",
+    "type": "Standard",
+    "typical_speakers": ["Halflings"],
+    "script": "Common"
+    
+  },
+  {
+    
+    "name": "Orc",
+    "type": "Standard",
+    "typical_speakers": ["Orcs"],
+    "script": "Dwarvish"
+    
+  },
+  {
+    
+    "name": "Abyssal",
+    "type": "Exotic",
+    "typical_speakers": ["Demons"],
+    "script": "Infernal"
+    
+  },
+  {
+    
+    "name": "Celestial",
+    "type": "Exotic",
+    "typical_speakers": ["Celestials"],
+    "script": "Celestial"
+    
+  },
+  {
+    
+    "name": "Draconic",
+    "type": "Exotic",
+    "typical_speakers": ["Dragons", "Dragonborn"],
+    "script": "Draconic"
+    
+  },
+  {
+    
+    "name": "Deep Speech",
+    "type": "Exotic",
+    "typical_speakers": ["Aboleths", "Cloakers"],
+    "script": ""
+  },
+  {
+    
+    "name": "Infernal",
+    "type": "Exotic",
+    "typical_speakers": ["Devils"],
+    "script": "Infernal"
+    
+  },
+  {
+    
+    "name": "Primordial",
+    "type": "Exotic",
+    "typical_speakers": ["Elementals"],
+    "script": "Dwarvish"
+    
+  },
+  {
+    
+    "name": "Sylvan",
+    "type": "Exotic",
+    "typical_speakers": ["Fey creatures"],
+    "script": "Elvish"
+    
+  },
+  {
+    
+    "name": "Undercommon",
+    "type": "Exotic",
+    "typical_speakers": ["Underdark traders"],
+    "script": "Elvish"
+    
+  }
+]

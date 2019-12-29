@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Hill Dwarf",
+    "race": {
+      "name": "Dwarf"
+    },
+    "desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.",
+    "ability_bonuses": [
+      {
+        "name": "WIS",
+        "bonus": 1
+      }
+    ],
+    "ability_bonus_options": {},
+    "starting_proficiencies": [],
+    "starting_proficiency_options": {},
+    "languages": [],
+    "language_options": {},
+    "racial_traits": [
+      {
+        "name": "Dwarven Toughness"
+      }
+    ],
+    "racial_trait_options": {}
+  },
+  {
+    "name": "High Elf",
+    "race": {
+      "name": "Elf"
+    },
+    "desc": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.",
+    "ability_bonuses": [
+      {
+        "name": "INT",
+        "bonus": 1
+      }
+    ],
+    "ability_bonus_options": {},
+    "starting_proficiencies": [
+      {
+        "name": "Longswords"
+      },
+      {
+        "name": "Shortswords"
+      },
+      {
+        "name": "Shortbows"
+      },
+      {
+        "name": "Longbows"
+      }
+    ],
+    "starting_proficiency_options": {},
+    "languages": [],
+    "language_options": {
+      "choose": 1,
+      "from": [
+        {
+          "name": "Dwarvish"
+        },
+        {
+          "name": "Giant"
+        },
+        {
+          "name": "Gnomish"
+        },
+        {
+          "name": "Goblin"
+        },
+        {
+          "name": "Halfling"
+        },
+        {
+          "name": "Orc"
+        },
+        {
+          "name": "Abyssal"
+        },
+        {
+          "name": "Celestial"
+        },
+        {
+          "name": "Draconic"
+        },
+        {
+          "name": "Deep Speech"
+        },
+        {
+          "name": "Infernal"
+        },
+        {
+          "name": "Primordial"
+        },
+        {
+          "name": "Sylvan"
+        },
+        {
+          "name": "Undercommon"
+        }
+      ],
+      "type": "language"
+    },
+    "racial_traits": [],
+    "racial_trait_options": {
+      "choose": 1,
+      "from": [
+        {
+          "name": "High Elf Cantrip: Light"
+        },
+        {
+          "name": "High Elf Cantrip: Mage Hand"
+        },
+        {
+          "name": "High Elf Cantrip: Mending"
+        },
+        {
+          "name": "High Elf Cantrip: Message"
+        },
+        {
+          "name": "High Elf Cantrip: Minor Illusion"
+        },
+        {
+          "name": "High Elf Cantrip: Acid Splash"
+        },
+        {
+          "name": "High Elf Cantrip: Prestidigitation"
+        },
+        {
+          "name": "High Elf Cantrip: Ray of Frost"
+        },
+        {
+          "name": "High Elf Cantrip: Shocking Grasp"
+        },
+        {
+          "name": "High Elf Cantrip: True Strike"
+        },
+        {
+          "name": "High Elf Cantrip: Chill Touch"
+        },
+        {
+          "name": "High Elf Cantrip: Dancing Lights"
+        }
+      ],
+      "type": "trait"
+    }
+  },
+  {
+    "name": "Lightfoot Halfling",
+    "race": {
+      "name": "Halfling"
+    },
+    "desc": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
+    "ability_bonuses": [
+      {
+        "name": "CHA",
+        "bonus": 1
+      }
+    ],
+    "ability_bonus_options": {},
+    "starting_proficiencies": [],
+    "starting_proficiency_options": {},
+    "languages": [],
+    "language_options": {},
+    "racial_traits": [
+      {
+        "name": "Naturally Stealthy"
+      }
+    ],
+    "racial_trait_options": {}
+  },
+  {
+    "name": "Rock Gnome",
+    "race": {
+      "name": "Gnome"
+    },
+    "desc": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.",
+    "ability_bonuses": [
+      {
+        "name": "CON",
+        "bonus": 1
+      }
+    ],
+    "starting_proficiencies": [],
+    "starting_proficiency_options": {},
+    "languages": [
+      {
+        "name": "Common"
+      },
+      {
+        "name": "Gnomish"
+      }
+    ],
+    "language_options": {},
+    "racial_traits": [
+      {
+        "name": "Darkvision"
+      },
+      {
+        "name": "Gnome Cunning"
+      },
+      {
+        "name": "Artificer's Lore"
+      },
+      {
+        "name": "Tinker"
+      }
+    ],
+    "racial_trait_options": {}
+  }
+]

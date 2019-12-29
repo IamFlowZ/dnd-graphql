@@ -1,0 +1,1037 @@
+[
+	{
+		"name": "Barbarian",
+		"hit_die": 12,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Animal Handling"
+					},
+					{
+						"name": "Skill: Athletics"
+					},
+					{
+						"name": "Skill: Intimidation"
+					},
+					{
+						"name": "Skill: Nature"
+					},
+					{
+						"name": "Skill: Perception"
+					},
+					{
+						"name": "Skill: Survival"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Light armor"
+			},
+			{
+				"name": "Medium armor"
+			},
+			{
+				"name": "Shields"
+			},
+			{
+				"name": "Simple weapons"
+			},
+			{
+				"name": "Martial weapons"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "STR"
+			},
+			{
+				"name": "CON"
+			}
+		],
+		"starting_equipment": {
+			"class": "Barbarian"
+		},
+		"class_levels": {
+			"class": "Barbarian"
+		},
+		"subclasses": [
+			{
+				"name": "Berserker"
+			}
+		],
+		"spellcasting": {
+
+		}
+	},
+	{
+		"name": "Bard",
+		"hit_die": 8,
+		"proficiency_choices": [
+			{
+				"choose": 3,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Acrobatics"
+					},
+					{
+						"name": "Skill: Animal Handling"
+					},
+					{
+						"name": "Skill: Arcana"
+					},
+					{
+						"name": "Skill: Athletics"
+					},
+					{
+						"name": "Skill: Deception"
+					},
+					{
+						"name": "Skill: History"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Intimidation"
+					},
+					{
+						"name": "Skill: Investigation"
+					},
+					{
+						"name": "Skill: Medicine"
+					},
+					{
+						"name": "Skill: Nature"
+					},
+					{
+						"name": "Skill: Perception"
+					},
+					{
+						"name": "Skill: Performance"
+					},
+					{
+						"name": "Skill: Persuasion"
+					},
+					{
+						"name": "Skill: Religion"
+					},
+					{
+						"name": "Skill: Sleight of Hand"
+					},
+					{
+						"name": "Skill: Stealth"
+					},
+					{
+						"name": "Skill: Survival"
+					}
+				]
+			},
+			{
+				"choose": 3,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Bagpipes"
+					},
+					{
+						"name": "Drum"
+					},
+					{
+						"name": "Dulcimer"
+					},
+					{
+						"name": "Flute"
+					},
+					{
+						"name": "Lute"
+					},
+					{
+						"name": "Lyre"
+					},
+					{
+						"name": "Horn"
+					},
+					{
+						"name": "Pan flute"
+					},
+					{
+						"name": "Shawm"
+					},
+					{
+						"name": "Viol"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Light armor"
+			},
+			{
+				"name": "Simple weapons"
+			},
+			{
+				"name": "Longswords"
+			},
+			{
+				"name": "Rapiers"
+			},
+			{
+				"name": "Shortswords"
+			},
+			{
+				"name": "Crossbows, hand"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "DEX"
+			},
+			{
+				"name": "CHA"
+			}
+		],
+		"starting_equipment": {
+			"class": "Bard"
+		},
+		"class_levels": {
+			"class": "Bard"
+		},
+		"subclasses": [
+			{
+				"name": "Lore"
+			}
+		],
+		"spellcasting": {
+			"class": "Bard"
+		}
+	},
+	{
+		"name": "Cleric",
+		"hit_die": 8,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: History"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Medicine"
+					},
+					{
+						"name": "Skill: Persuasion"
+					},
+					{
+						"name": "Skill: Religion"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Light armor"
+			},
+			{
+				"name": "Medium armor"
+			},
+			{
+				"name": "Shields"
+			},
+			{
+				"name": "Simple weapons"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "WIS"
+			},
+			{
+				"name": "CHA"
+			}
+		],
+		"starting_equipment": {
+			"class": "Cleric"
+		},
+		"class_levels": {
+			"class": "Cleric"
+		},
+		"subclasses": [
+			{
+				"name": "Life"
+			}
+		],
+		"spellcasting": {
+			"class": "Cleric"
+		}
+	},
+	{
+		"name": "Druid",
+		"hit_die": 8,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Animal Handling"
+					},
+					{
+						"name": "Skill: Arcana"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Medicine"
+					},
+					{
+						"name": "Skill: Nature"
+					},
+					{
+						"name": "Skill: Perception"
+					},
+					{
+						"name": "Skill: Religion"
+					},
+					{
+						"name": "Skill: Survival"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Light armor"
+			},
+			{
+				"name": "Medium armor"
+			},
+			{
+				"name": "Shields"
+			},
+			{
+				"name": "Clubs"
+			},
+			{
+				"name": "Daggers"
+			},
+			{
+				"name": "Javelins"
+			},
+			{
+				"name": "Maces"
+			},
+			{
+				"name": "Quarterstaffs"
+			},
+			{
+				"name": "Sickles"
+			},
+			{
+				"name": "Spears"
+			},
+			{
+				"name": "Darts"
+			},
+			{
+				"name": "Slings"
+			},
+			{
+				"name": "Scimitars"
+			},
+			{
+				"name": "Herbalism Kit"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "INT"
+			},
+			{
+				"name": "WIS"
+			}
+		],
+		"starting_equipment": {
+			"class": "Druid"
+		},
+		"class_levels": {
+			"class": "Druid"
+		},
+		"subclasses": [
+			{
+				"name": "Land"
+			}
+		],
+		"spellcasting": {
+			"class": "Druid"
+		}
+	},
+	{
+		"name": "Fighter",
+		"hit_die": 10,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Acrobatics"
+					},
+					{
+						"name": "Skill: Animal Handling"
+					},
+					{
+						"name": "Skill: Athletics"
+					},
+					{
+						"name": "Skill: History"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Intimidation"
+					},
+					{
+						"name": "Skill: Perception"
+					},
+					{
+						"name": "Skill: Survival"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "All armor"
+			},
+			{
+				"name": "Shields"
+			},
+			{
+				"name": "Simple weapons"
+			},
+			{
+				"name": "Martial weapons"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "STR"
+			},
+			{
+				"name": "CON"
+			}
+		],
+		"starting_equipment": {
+			"class": "Fighter"
+		},
+		"class_levels": {
+			"class": "Fighter"
+		},
+		"subclasses": [
+			{
+				"name": "Champion"
+			}
+		],
+		"spellcasting": {
+
+		}
+	},
+	{
+		"name": "Monk",
+		"hit_die": 8,
+		"proficiency_choices": [
+			{
+				"choose": 1,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Alchemist's supplies"
+					},
+					{
+						"name": "Brewer's supplies"
+					},
+					{
+						"name": "Calligrapher's supplies"
+					},
+					{
+						"name": "Carpenter's tools"
+					},
+					{
+						"name": "Cartographer's tools"
+					},
+					{
+						"name": "Cobbler's tools"
+					},
+					{
+						"name": "Cook's utensils"
+					},
+					{
+						"name": "Glassblower's tools"
+					},
+					{
+						"name": "Jeweler's tools"
+					},
+					{
+						"name": "Leatherworker's tools"
+					},
+					{
+						"name": "Mason's tools"
+					},
+					{
+						"name": "Painter's supplies"
+					},
+					{
+						"name": "Potter's tools"
+					},
+					{
+						"name": "Smith's tools"
+					},
+					{
+						"name": "Tinker's tools"
+					},
+					{
+						"name": "Weaver's tools"
+					},
+					{
+						"name": "Woodcarver's tools"
+					},
+					{
+						"name": "Disguise kit"
+					},
+					{
+						"name": "Forgery kit"
+					}
+				]
+			},
+			{
+				"choose": 1,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Bagpipes"
+					},
+					{
+						"name": "Drum"
+					},
+					{
+						"name": "Dulcimer"
+					},
+					{
+						"name": "Flute"
+					},
+					{
+						"name": "Lute"
+					},
+					{
+						"name": "Lyre"
+					},
+					{
+						"name": "Horn"
+					},
+					{
+						"name": "Pan flute"
+					},
+					{
+						"name": "Shawm"
+					},
+					{
+						"name": "Viol"
+					}
+				]
+			},
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Acrobatics"
+					},
+					{
+						"name": "Skill: Athletics"
+					},
+					{
+						"name": "Skill: History"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Religion"
+					},
+					{
+						"name": "Skill: Stealth"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Simple weapons"
+			},
+			{
+				"name": "Shortswords"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "STR"
+			},
+			{
+				"name": "DEX"
+			}
+		],
+		"starting_equipment": {
+			"class": "Monk"
+		},
+		"class_levels": {
+			"class": "Monk"
+		},
+		"subclasses": [
+			{
+				"name": "Open Hand"
+			}
+		],
+		"spellcasting": {
+
+		}
+	},
+	{
+		"name": "Paladin",
+		"hit_die": 10,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Athletics"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Intimidation"
+					},
+					{
+						"name": "Skill: Medicine"
+					},
+					{
+						"name": "Skill: Persuasion"
+					},
+					{
+						"name": "Skill: Religion"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "All armor"
+			},
+			{
+				"name": "Shields"
+			},
+			{
+				"name": "Simple weapons"
+			},
+			{
+				"name": "Martial weapons"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "WIS"
+			},
+			{
+				"name": "CHA"
+			}
+		],
+		"starting_equipment": {
+			"class": "Paladin"
+		},
+		"class_levels": {
+			"class": "Paladin"
+		},
+		"subclasses": [
+			{
+				"name": "Devotion"
+			}
+		],
+		"spellcasting": {
+			"class": "Paladin"
+		}
+	},
+	{
+		"name": "Ranger",
+		"hit_die": 10,
+		"proficiency_choices": [
+			{
+				"choose": 3,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Animal Handling"
+					},
+					{
+						"name": "Skill: Athletics"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Investigation"
+					},
+					{
+						"name": "Skill: Nature"
+					},
+					{
+						"name": "Skill: Perception"
+					},
+					{
+						"name": "Skill: Stealth"
+					},
+					{
+						"name": "Skill: Survival"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Light armor"
+			},
+			{
+				"name": "Medium armor"
+			},
+			{
+				"name": "Shields"
+			},
+			{
+				"name": "Simple weapons"
+			},
+			{
+				"name": "Martial weapons"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "STR"
+			},
+			{
+				"name": "DEX"
+			}
+		],
+		"starting_equipment": {
+			"class": "Ranger"
+		},
+		"class_levels": {
+			"class": "Ranger"
+		},
+		"subclasses": [
+			{
+				"name": "Hunter"
+			}
+		],
+		"spellcasting": {
+			"class": "Ranger"
+		}
+	},
+	{
+		"name": "Rogue",
+		"hit_die": 8,
+		"proficiency_choices": [
+			{
+				"choose": 4,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Acrobatics"
+					},
+					{
+						"name": "Skill: Athletics"
+					},
+					{
+						"name": "Skill: Deception"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Intimidation"
+					},
+					{
+						"name": "Skill: Investigation"
+					},
+					{
+						"name": "Skill: Perception"
+					},
+					{
+						"name": "Skill: Performance"
+					},
+					{
+						"name": "Skill: Persuasion"
+					},
+					{
+						"name": "Skill: Sleight of Hand"
+					},
+					{
+						"name": "Skill: Stealth"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Light armor"
+			},
+			{
+				"name": "Simple weapons"
+			},
+			{
+				"name": "Longswords"
+			},
+			{
+				"name": "Rapiers"
+			},
+			{
+				"name": "Shortswords"
+			},
+			{
+				"name": "Crossbows, hand"
+			},
+			{
+				"name": "Thieves' Tools"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "DEX"
+			},
+			{
+				"name": "INT"
+			}
+		],
+		"starting_equipment": {
+			"class": "Rogue"
+		},
+		"class_levels": {
+			"class": "Rogue"
+		},
+		"subclasses": [
+			{
+				"name": "Thief"
+			}
+		],
+		"spellcasting": {
+
+		}
+	},
+	{
+		"name": "Sorcerer",
+		"hit_die": 6,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Arcana"
+					},
+					{
+						"name": "Skill: Deception"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Intimidation"
+					},
+					{
+						"name": "Skill: Persuasion"
+					},
+					{
+						"name": "Skill: Religion"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Daggers"
+			},
+			{
+				"name": "Quarterstaffs"
+			},
+			{
+				"name": "Darts"
+			},
+			{
+				"name": "Slings"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "CON"
+			},
+			{
+				"name": "CHA"
+			}
+		],
+		"starting_equipment": {
+			"class": "Sorcerer"
+		},
+		"class_levels": {
+			"class": "Sorcerer"
+		},
+		"subclasses": [
+			{
+				"name": "Draconic"
+			}
+		],
+		"spellcasting": {
+			"class": "Sorcerer"
+		}
+	},
+	{
+		"name": "Warlock",
+		"hit_die": 8,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Arcana"
+					},
+					{
+						"name": "Skill: Deception"
+					},
+					{
+						"name": "Skill: History"
+					},
+					{
+						"name": "Skill: Intimidation"
+					},
+					{
+						"name": "Skill: Investigation"
+					},
+					{
+						"name": "Skill: Nature"
+					},
+					{
+						"name": "Skill: Religion"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Light armor"
+			},
+			{
+				"name": "Simple weapons"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "WIS"
+			},
+			{
+				"name": "CHA"
+			}
+		],
+		"starting_equipment": {
+			"class": "Warlock"
+		},
+		"class_levels": {
+			"class": "Warlock"
+		},
+		"subclasses": [
+			{
+				"name": "Fiend"
+			}
+		],
+		"spellcasting": {
+			"class": "Warlock"
+		}
+	},
+	{
+		"name": "Wizard",
+		"hit_die": 6,
+		"proficiency_choices": [
+			{
+				"choose": 2,
+				"type": "proficiencies",
+				"from": [
+					{
+						"name": "Skill: Arcana"
+					},
+					{
+						"name": "Skill: History"
+					},
+					{
+						"name": "Skill: Insight"
+					},
+					{
+						"name": "Skill: Investigation"
+					},
+					{
+						"name": "Skill: Medicine"
+					},
+					{
+						"name": "Skill: Religion"
+					}
+				]
+			}
+		],
+		"proficiencies": [
+			{
+				"name": "Daggers"
+			},
+			{
+				"name": "Quarterstaffs"
+			},
+			{
+				"name": "Darts"
+			},
+			{
+				"name": "Slings"
+			}
+		],
+		"saving_throws": [
+			{
+				"name": "INT"
+			},
+			{
+				"name": "WIS"
+			}
+		],
+		"starting_equipment": {
+			"class": "Wizard"
+		},
+		"class_levels": {
+			"class": "Wizard"
+		},
+		"subclasses": [
+			{
+				"name": "Evocation"
+			}
+		],
+		"spellcasting": {
+			"class": "Wizard"
+		}
+	}
+]
