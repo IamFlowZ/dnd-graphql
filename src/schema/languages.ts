@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 import BaseTypeDef from './baseTypeDef'
 
 class Language {
@@ -29,7 +30,7 @@ export default class LanguageTypeDef extends BaseTypeDef {
             `, 
             ``
         )
-        this.languages = JSON.parse(fs.readFileSync('sources/Languages.json'))
+        this.languages = JSON.parse(fs.readFileSync(path.join(__dirname, '../sources/Languages.json')))
     }
     resolvers = {
         queries: {
