@@ -35,15 +35,12 @@ export default class LanguageTypeDef extends BaseTypeDef {
     resolvers = {
         queries: {
             languages: (parent, args) => {
-                if(args.name) {
-                    return this.languages
-                        .filter(language =>
-                            language['name'].toLowerCase() === args.name.toLowerCase()
-                        )
-                } else if(args.script) {
+                console.log('here')
+                if(args.name || args.script) {
+                    let property = args.name ? "name": "script"
                     return this.languages
                         .filter(language => 
-                            language['script'].toLowerCase() === args.script.toLowerCase()
+                            language[property].toLowerCase() === args[property].toLowerCase()
                         )
                         .map(language =>
                             //@ts-ignore
