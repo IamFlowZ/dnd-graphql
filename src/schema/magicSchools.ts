@@ -31,7 +31,7 @@ export default class MagicSchoolsTypeDef extends BaseTypeDef {
                 (args.name) ?
                     this.schools
                         .filter(school => 
-                            school['name'] === args.name
+                            school['name'].toLowerCase() === args.name.toLowerCase()
                         ).map(school =>
                             //@ts-ignore
                             new MagicSchool(school)
