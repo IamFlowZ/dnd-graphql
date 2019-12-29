@@ -1,6 +1,10 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
     "plugins": [
         "@typescript-eslint",
         "jest",
@@ -15,6 +19,6 @@
         "plugin:import/errors",
         "plugin:import/warnings",
         "plugin:import/typescript",
-        "plugin:node/recommended"
+        // "plugin:node/recommended"
     ],
 }

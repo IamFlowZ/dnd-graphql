@@ -37,9 +37,9 @@ export default class LanguageTypeDef extends BaseTypeDef {
             languages: (parent, args) => {
                 if(args.name) {
                     return this.languages
-                    .filter(language => 
-                        language['name'].toLowerCase() === args.name.toLowerCase()
-                    )
+                        .filter(language =>
+                            language['name'].toLowerCase() === args.name.toLowerCase()
+                        )
                 } else if(args.script) {
                     return this.languages
                         .filter(language => 
