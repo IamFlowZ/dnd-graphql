@@ -30,7 +30,7 @@ export default class LanguageTypeDef extends BaseTypeDef {
             `, 
             ``
         )
-        this.languages = JSON.parse(fs.readFileSync(path.join(__dirname, '../sources/Languages.json')))
+        this.languages = JSON.parse(fs.readFileSync(path.join(__dirname, '../sources/Languages.json')).toString())
     }
     resolvers = {
         queries: {
