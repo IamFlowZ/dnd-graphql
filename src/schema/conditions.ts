@@ -17,7 +17,7 @@ interface SourceCond {
 }
 
 export default class ConditionsTypeDef extends BaseTypeDef {
-    conditions: Array<object>
+    conditions: Array<SourceCond>
     constructor() {
         super(`
             type Condition {
@@ -34,14 +34,14 @@ export default class ConditionsTypeDef extends BaseTypeDef {
             conditions: (parent, args): Array<Condition> =>
                 (args.name) ?
                     this.conditions
-                        .filter((condition: SourceCond) =>
+                        .filter(condition =>
                             condition['name'].toLowerCase() === args.name.toLowerCase()
                         )
-                        .map((condition: SourceCond) =>
+                        .map(condition =>
                             new Condition(condition)
                         ) :
                     this.conditions
-                        .map((condition: SourceCond) =>
+                        .map(condition =>
                             new Condition(condition)
                         )
         },

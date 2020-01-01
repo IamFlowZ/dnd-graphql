@@ -3,7 +3,7 @@ import path from 'path'
 
 import BaseTypeDef from './baseTypeDef'
 
-class Skill {
+export class Skill {
     name: string
     description: string
     abilityScore: string
@@ -21,7 +21,7 @@ interface SourceSkill {
 }
 
 export default class SkillsTypeDef extends BaseTypeDef {
-    skills: Array<object>
+    skills: Array<SourceSkill>
     constructor() {
         super(`
             type Skill {
@@ -30,25 +30,36 @@ export default class SkillsTypeDef extends BaseTypeDef {
                 abilityScore: String
             }
         `,`
-            skills(name: String): [Skill]
+            skills(name: String, abilityScore: String): [Skill]
         `,``)
         this.skills = JSON.parse(fs.readFileSync(path.join(__dirname, '../sources/Skills.json')).toString())
     }
     resolvers = {
         queries: {
-            skills: (parent, args): Array<Skill> => 
-                (args.name) ?
-                    this.skills
-                        .filter((skill: SourceSkill) =>
-                            skill.name === args.name
+            skills: (parent, args): Array<Skill> => {
+                if(args.name) {
+                    return this.skills
+                        .filter(skill =>
+                            skill.name.toLowerCase() === args.name.toLowerCase()
                         )
-                        .map((skill: SourceSkill) =>
-                            new Skill(skill)
-                        ) :
-                    this.skills
-                        .map((skill: SourceSkill) =>
+                        .map(skill =>
                             new Skill(skill)
                         )
+                } else if(args.abilityScore) {
+                    return this.skills
+                        .filter(skill =>
+                            skill.ability_score['name'].toLowerCase() === args.abilityScore.toLowerCase()
+                        )
+                        .map(skill =>
+                            new Skill(skill)
+                        )
+                } else {
+                    return this.skills
+                        .map(skill =>
+                            new Skill(skill)
+                        )
+                }
+            }
         },
         mutations: {}
     }

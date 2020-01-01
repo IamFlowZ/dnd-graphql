@@ -18,7 +18,7 @@ interface SourceMagicSchool {
 }
 
 export default class MagicSchoolsTypeDef extends BaseTypeDef {
-    schools: Array<object>
+    schools: Array<SourceMagicSchool>
     constructor() {
         super(`
             type MagicSchool {
@@ -35,13 +35,13 @@ export default class MagicSchoolsTypeDef extends BaseTypeDef {
             magicSchools: (parent, args): Array<MagicSchool> =>
                 (args.name) ?
                     this.schools
-                        .filter((school: SourceMagicSchool )=> 
+                        .filter(school => 
                             school['name'].toLowerCase() === args.name.toLowerCase()
-                        ).map((school: SourceMagicSchool )=>
+                        ).map(school =>
                             new MagicSchool(school)
                         ) :
                     this.schools
-                        .map((school: SourceMagicSchool )=>
+                        .map(school =>
                             new MagicSchool(school)
                         )
         },

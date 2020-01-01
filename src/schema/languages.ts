@@ -26,7 +26,7 @@ interface SourceLang {
 }
 
 export default class LanguageTypeDef extends BaseTypeDef {
-    languages: Array<object>
+    languages: Array<SourceLang>
     constructor() {
         super(`
             type Language {
@@ -51,12 +51,12 @@ export default class LanguageTypeDef extends BaseTypeDef {
                         .filter(language => 
                             language[property].toLowerCase() === args[property].toLowerCase()
                         )
-                        .map((language: SourceLang) =>
+                        .map(language =>
                             new Language(language)
                         )
                 } else {
                     return this.languages
-                        .map((language: SourceLang) =>
+                        .map(language =>
                             new Language(language)
                         )
                 }

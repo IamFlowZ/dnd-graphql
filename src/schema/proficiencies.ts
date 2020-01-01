@@ -24,7 +24,7 @@ interface SourceProf {
 }
 
 export default class ProficienciesTypeDef extends BaseTypeDef {
-    proficiencies: Array<object>
+    proficiencies: Array<SourceProf>
     constructor() {
         super(`
             type Proficiency {
@@ -48,7 +48,7 @@ export default class ProficienciesTypeDef extends BaseTypeDef {
                         .filter(prof =>
                             prof[property] === args[property].toLowerCase()
                         )
-                        .map((prof: SourceProf) =>
+                        .map(prof =>
                             new Proficiency(prof)
                         )
                 } else if(args.class) {
@@ -56,7 +56,7 @@ export default class ProficienciesTypeDef extends BaseTypeDef {
                         .filter(prof =>
                             prof[`classes`].includes(args["class"].toLowerCase())
                         )
-                        .map((prof: SourceProf) =>
+                        .map(prof =>
                             new Proficiency(prof)
                         )
                 } else if(args.race) {
@@ -64,12 +64,12 @@ export default class ProficienciesTypeDef extends BaseTypeDef {
                         .filter(prof =>
                             prof[`races`].includes(args['race'].toLowerCase())
                         )
-                        .map((prof: SourceProf) =>
+                        .map(prof =>
                             new Proficiency(prof)
                         )
                 } else {
                     return this.proficiencies
-                        .map((prof: SourceProf) =>
+                        .map(prof =>
                             new Proficiency(prof)
                         )
                 }
