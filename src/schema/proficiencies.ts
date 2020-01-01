@@ -8,12 +8,19 @@ class Proficiency {
     name: string
     classes: Array<string>
     races: Array<string>
-    constructor({type, name, classes, races}: {type: string, name: string, classes: Array<object>, races: Array<object>}) {
+    constructor({type, name, classes, races}: {type: string; name: string; classes: Array<object>; races: Array<object>}) {
         this.type = type.toLowerCase()
         this.name = name.toLowerCase()
         this.classes = classes.map(aClass => aClass['name'].toLowerCase())
         this.races = races.map(race => race['name'].toLowerCase())
     }
+}
+
+interface SourceProf {
+    type: string;
+    name: string;
+    classes: Array<object>;
+    races: Array<object>;
 }
 
 export default class ProficienciesTypeDef extends BaseTypeDef {
@@ -34,15 +41,14 @@ export default class ProficienciesTypeDef extends BaseTypeDef {
     }
     resolvers = {
         queries: {
-            proficiencies: (parent, args) => {
+            proficiencies: (parent, args): Array<Proficiency> => {
                 if(args.type || args.name) {
-                    let property = args.type ? "type" : "name"
+                    const property = args.type ? "type" : "name"
                     return this.proficiencies
                         .filter(prof =>
                             prof[property] === args[property].toLowerCase()
                         )
-                        .map(prof =>
-                            //@ts-ignore
+                        .map((prof: SourceProf) =>
                             new Proficiency(prof)
                         )
                 } else if(args.class) {
@@ -50,8 +56,7 @@ export default class ProficienciesTypeDef extends BaseTypeDef {
                         .filter(prof =>
                             prof[`classes`].includes(args["class"].toLowerCase())
                         )
-                        .map(prof =>
-                            //@ts-ignore
+                        .map((prof: SourceProf) =>
                             new Proficiency(prof)
                         )
                 } else if(args.race) {
@@ -59,14 +64,12 @@ export default class ProficienciesTypeDef extends BaseTypeDef {
                         .filter(prof =>
                             prof[`races`].includes(args['race'].toLowerCase())
                         )
-                        .map(prof =>
-                            //@ts-ignore
+                        .map((prof: SourceProf) =>
                             new Proficiency(prof)
                         )
                 } else {
                     return this.proficiencies
-                        .map(prof =>
-                            //@ts-ignore
+                        .map((prof: SourceProf) =>
                             new Proficiency(prof)
                         )
                 }

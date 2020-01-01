@@ -7,12 +7,21 @@ class Language {
     type: string
     script: string
     typicalSpeakers: Array<string>
+    //@ts-ignore typical_speakers comes from the data source. will change with move to real data store
     constructor({name, type, script, typical_speakers}) {
         this.name = name
         this.type = type
         this.script = script
+        //@ts-ignore typical_speakers comes from the data source. will change with move to real data store
         this.typicalSpeakers = typical_speakers
     }
+}
+
+interface SourceLang {
+    name: string;
+    type: string;
+    script: string;
+    typical_speakers: Array<string>;
 }
 
 export default class LanguageTypeDef extends BaseTypeDef {
@@ -34,20 +43,22 @@ export default class LanguageTypeDef extends BaseTypeDef {
     }
     resolvers = {
         queries: {
-            languages: (parent, args) => {
+            languages: (parent, args): Array<Language> => {
                 console.log('here')
                 if(args.name || args.script) {
-                    let property = args.name ? "name": "script"
+                    const property = args.name ? "name": "script"
                     return this.languages
                         .filter(language => 
                             language[property].toLowerCase() === args[property].toLowerCase()
                         )
-                        .map(language =>
-                            //@ts-ignore
+                        .map((language: SourceLang) =>
                             new Language(language)
                         )
                 } else {
                     return this.languages
+                        .map((language: SourceLang) =>
+                            new Language(language)
+                        )
                 }
             }
         },

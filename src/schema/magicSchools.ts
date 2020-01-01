@@ -12,6 +12,11 @@ export class MagicSchool {
     }
 }
 
+interface SourceMagicSchool {
+    name: string;
+    desc: string;
+}
+
 export default class MagicSchoolsTypeDef extends BaseTypeDef {
     schools: Array<object>
     constructor() {
@@ -27,18 +32,16 @@ export default class MagicSchoolsTypeDef extends BaseTypeDef {
     }
     resolvers = {
         queries: {
-            magicSchools: (parent, args) =>
+            magicSchools: (parent, args): Array<MagicSchool> =>
                 (args.name) ?
                     this.schools
-                        .filter(school => 
+                        .filter((school: SourceMagicSchool )=> 
                             school['name'].toLowerCase() === args.name.toLowerCase()
-                        ).map(school =>
-                            //@ts-ignore
+                        ).map((school: SourceMagicSchool )=>
                             new MagicSchool(school)
                         ) :
                     this.schools
-                        .map(school =>
-                            //@ts-ignore
+                        .map((school: SourceMagicSchool )=>
                             new MagicSchool(school)
                         )
         },

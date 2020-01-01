@@ -11,6 +11,10 @@ class Condition {
         this.description = desc
     }
 }
+interface SourceCond {
+    name: string;
+    desc: Array<string>;
+}
 
 export default class ConditionsTypeDef extends BaseTypeDef {
     conditions: Array<object>
@@ -27,19 +31,17 @@ export default class ConditionsTypeDef extends BaseTypeDef {
     }
     resolvers = {
         queries: {
-            conditions: (parent, args) =>
+            conditions: (parent, args): Array<Condition> =>
                 (args.name) ?
                     this.conditions
-                        .filter(condition =>
+                        .filter((condition: SourceCond) =>
                             condition['name'].toLowerCase() === args.name.toLowerCase()
                         )
-                        .map(condition =>
-                            //@ts-ignore
+                        .map((condition: SourceCond) =>
                             new Condition(condition)
                         ) :
                     this.conditions
-                        .map(condition =>
-                            //@ts-ignore
+                        .map((condition: SourceCond) =>
                             new Condition(condition)
                         )
         },
