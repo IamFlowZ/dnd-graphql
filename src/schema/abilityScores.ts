@@ -22,8 +22,8 @@ class AbilityScore {
 interface SourceAbilityScore {
     name: string;
     full_name: string;
-    desc: Array<string>
-    skills: Array<Skill>
+    desc: Array<string>;
+    skills: Array<Skill>;
 }
 
 export default class AbilityScoreTypeDef extends BaseTypeDef {
