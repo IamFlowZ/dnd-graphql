@@ -6,7 +6,7 @@ import BaseTypeDef from './baseTypeDef'
 export class MagicSchool {
     name: string
     description: string
-    constructor({name, desc}) {
+    constructor({name, desc}: SourceMagicSchool) {
         this.name = name
         this.description = desc
     }

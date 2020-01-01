@@ -6,7 +6,7 @@ import BaseTypeDef from './baseTypeDef'
 class Condition {
     name: string
     description: Array<string>
-    constructor({name, desc}) {
+    constructor({name, desc}: SourceCond) {
         this.name = name
         this.description = desc
     }

@@ -1,5 +1,6 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
+
 import BaseTypeDef from './baseTypeDef'
 
 class Language {
@@ -8,7 +9,7 @@ class Language {
     script: string
     typicalSpeakers: Array<string>
     //@ts-ignore typical_speakers comes from the data source. will change with move to real data store
-    constructor({name, type, script, typical_speakers}) {
+    constructor({name, type, script, typical_speakers}: SourceLang) {
         this.name = name
         this.type = type
         this.script = script
@@ -44,7 +45,6 @@ export default class LanguageTypeDef extends BaseTypeDef {
     resolvers = {
         queries: {
             languages: (parent, args): Array<Language> => {
-                console.log('here')
                 if(args.name || args.script) {
                     const property = args.name ? "name": "script"
                     return this.languages

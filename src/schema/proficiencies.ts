@@ -8,7 +8,7 @@ class Proficiency {
     name: string
     classes: Array<string>
     races: Array<string>
-    constructor({type, name, classes, races}: {type: string; name: string; classes: Array<object>; races: Array<object>}) {
+    constructor({type, name, classes, races}: SourceProf) {
         this.type = type.toLowerCase()
         this.name = name.toLowerCase()
         this.classes = classes.map(aClass => aClass['name'].toLowerCase())
