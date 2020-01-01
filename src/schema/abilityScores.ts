@@ -48,7 +48,6 @@ export default class AbilityScoreTypeDef extends BaseTypeDef {
             )
             return ablilityScore
         })
-        console.log(this.ablilityScores[0]['skills'][0]['name'])
     }
     resolvers = {
         queries: {
