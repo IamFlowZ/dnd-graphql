@@ -81,7 +81,6 @@ export default class AbilityScoreTypeDef extends BaseTypeDef {
                 } else {
                     return this.ablilityScores
                         .map(abilityScore =>{
-                            console.log(new AbilityScore(abilityScore))
                             return new AbilityScore(abilityScore)
                         })
                 }
