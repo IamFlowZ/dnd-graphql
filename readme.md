@@ -17,6 +17,7 @@ Graphql service for Dungeon and Dragons 5th edition
 * Server-side JS runtime - [Node.js](https://nodejs.org/en/)
 * Data query language - [Graphql](https://graphql.org)
 * Graphql Library - [ApolloServer](https://www.apollographql.com)
+* Native Graph Database [Neo4j](https://neo4j.com/developer/javascript/)
 
 # Contributing
 
