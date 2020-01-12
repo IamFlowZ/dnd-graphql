@@ -22,7 +22,7 @@ export default class ConditionsTypeDef extends BaseTypeDef {
         super(`
             type Condition {
                 name: String
-                description: [String]
+                description: String
             }
         `, `
             conditions(name: String): [Condition]
