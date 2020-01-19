@@ -17,9 +17,12 @@ Graphql service for Dungeon and Dragons 5th edition
 * Server-side JS runtime - [Node.js](https://nodejs.org/en/)
 * Data query language - [Graphql](https://graphql.org)
 * Graphql Library - [ApolloServer](https://www.apollographql.com)
-* Native Graph Database [Neo4j](https://neo4j.com/developer/javascript/)
+* Native Graph Database - [Neo4j](https://neo4j.com/developer/javascript/)
+* Online diagraming tool - [draw.io](https://draw.io)
+* Graphql Visualization tool - [graphql-voyager](https://github.com/APIs-guru/graphql-voyager)
 
 # Contributing
+Pull Requests and issues pls.
 
 # Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
@@ -34,3 +37,6 @@ is released using the [Open Gaming License Version 1.0a](https://www.wizards.com
 
 # Acknowledgments
 DnD is pretty neat. Template for this readme comes from [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). Gitignore template taken from [github's gitignore](https://github.com/github/gitignore)
+
+# Notes
+Visualation of the goal for the datamodel available in the assets folder as well as a visualization of the current schema at $url:4000/voyager

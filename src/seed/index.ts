@@ -1,5 +1,6 @@
 import conditionSeed from './conditions.seed'
 import abilityAndSkills from './abilityScoreAndSkills.seed'
+import langsAndRaces from './languagesAndRaces.seed'
 
 
 export default function() {
