@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import {express as voyagerMiddleware} from 'graphql-voyager/middleware'
 import { ApolloServer, makeExecutableSchema } from 'apollo-server-express'
 import {makeAugmentedSchema} from 'neo4j-graphql-js'
@@ -21,6 +22,7 @@ const server = new ApolloServer({schema: modifiedSchema, context: {driver}})
 //  JSON Files
 // const server = new ApolloServer({typeDefs, resolvers, context: {driver}})
 const app = express()
+app.use(cors())
 app.use('/voyager', voyagerMiddleware({endpointUrl: '/graphql'}))
 server.applyMiddleware({app})
 

@@ -27,7 +27,7 @@ export default class SkillsTypeDef extends BaseTypeDef {
             type Skill {
                 name: String
                 description: String
-                abilityScore: String
+                abilityScore: AbilityScore
             }
         `,`
             skills(name: String, abilityScore: String): [Skill]
