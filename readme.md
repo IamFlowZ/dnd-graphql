@@ -1,5 +1,5 @@
 # DND 5e Graphql
-Graphql service for Dungeon and Dragons 5th edition
+Graphql service for Dungeon and Dragons 5th edition. A [GRANDStack](https://grandstack.io/) application. You can see the other half at [dnd-ui](https://github.com/IamFlowZ/dnd-ui)
 
 # Prerequisites
 * Node 10.x>
