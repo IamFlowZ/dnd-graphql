@@ -6,6 +6,7 @@ import {makeAugmentedSchema} from 'neo4j-graphql-js'
 import neo4j from "neo4j-driver"
 
 import Schema from './schema/schema'
+import seed from './seed'
 const mySchema = new Schema()
 const typeDefs = mySchema.typeDefs
 const resolvers = mySchema.resolvers
@@ -27,5 +28,6 @@ app.use('/voyager', voyagerMiddleware({endpointUrl: '/graphql'}))
 server.applyMiddleware({app})
 
 app.listen({port: 4000}, () => {
+    seed()
     console.log("Listening on port 4000")
 })
