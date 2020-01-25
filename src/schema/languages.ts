@@ -8,12 +8,11 @@ class Language {
     type: string
     script: string
     typicalSpeakers: Array<string>
-    //@ts-ignore typical_speakers comes from the data source. will change with move to real data store
+    
     constructor({name, type, script, typical_speakers}: SourceLang) {
         this.name = name
         this.type = type
         this.script = script
-        //@ts-ignore typical_speakers comes from the data source. will change with move to real data store
         this.typicalSpeakers = typical_speakers
     }
 }

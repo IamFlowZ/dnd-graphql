@@ -22,8 +22,8 @@ export default function() {
         return session.run(createCondition, {
             name: condition.name,
             desc: condition.desc.reduce((accu, curr) => `${accu} ${curr}`)
-        }).then(result => {
-            session.close()
         })
+        .then(_ => session.close())
+        .catch(err => console.error(err))
     })
 }
