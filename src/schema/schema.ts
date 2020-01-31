@@ -1,42 +1,45 @@
-import LanguageTypeDef from './languages'
-import MagicSchoolsTypeDef from './magicSchools'
-import ConditionsTypeDef from './conditions'
-import ProficienciesTypeDef from './proficiencies'
-import SkillsTypeDef from './skills'
-import AbilityTypeDef from './abilityScores'
-
-const languageDef = new LanguageTypeDef()
-const magicSchoolDef = new MagicSchoolsTypeDef()
-const conditionDef = new ConditionsTypeDef()
-const proficienciesDef = new ProficienciesTypeDef()
-const skillsDef = new SkillsTypeDef()
-const abilitiesDef = new AbilityTypeDef()
-
 export default class Schema {
     typeDefs = `
-        ${languageDef.types}
-        ${magicSchoolDef.types}
-        ${conditionDef.types}
-        ${proficienciesDef.types}
-        ${skillsDef.types}
-        ${abilitiesDef.types}
+        type Language {
+            name: String
+            type: String
+            script: String
+            typicalSpeakers: [String]
+        }
+        type AbilityScore {
+            name: String
+            fullName: String
+            description: String
+            notes: String
+            skills: [Skill]
+        }
+        type Condition {
+            name: String
+            description: String
+        }
+        type MagicSchool {
+            name: String
+            description: String
+        }
+        type Proficiency {
+            type: String
+            name: String
+            classes: [String]
+            races: [String]
+        }
+        type Skill {
+            name: String
+            description: String
+            abilityScore: AbilityScore
+        }
 
         type Query {
-            ${languageDef.queries}
-            ${magicSchoolDef.queries}
-            ${conditionDef.queries}
-            ${proficienciesDef.queries}
-            ${skillsDef.queries}
-            ${abilitiesDef.queries}
+            languages(name: String, script: String): [Language]
+            magicSchools(name: String): [MagicSchool]
+            conditions(name: String): [Condition]
+            proficiencies(type: String, name: String, class: String, race: String): [Proficiency]
+            skills(name: String, abilityScore: String): [Skill]
+            abilityScores(name: String, fullName: String, skill: String): [AbilityScore]
         }
-        type Mutation {
-            ${languageDef.mutations}
-            ${magicSchoolDef.mutations}
-            ${conditionDef.mutations}
-            ${proficienciesDef.mutations}
-            ${skillsDef.mutations}
-            ${abilitiesDef.mutations}
-        }
-        
     `
 }

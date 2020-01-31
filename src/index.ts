@@ -9,7 +9,7 @@ import Schema from './schema/schema'
 import seed from './seed'
 const mySchema = new Schema()
 const typeDefs = mySchema.typeDefs
-const resolvers = mySchema.resolvers
+// const resolvers = mySchema.resolvers
 const modifiedSchema = makeAugmentedSchema({typeDefs})
 
 const driver = neo4j.driver(
