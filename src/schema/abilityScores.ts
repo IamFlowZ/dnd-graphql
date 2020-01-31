@@ -40,52 +40,5 @@ export default class AbilityScoreTypeDef extends BaseTypeDef {
         `, `
             abilityScores(name: String, fullName: String, skill: String): [AbilityScore]
         `, ``)
-        this.ablilityScores = JSON.parse(fs.readFileSync(path.join(__dirname, '../sources/AbilityScores.json')).toString())
-        const skillDef = new SkillTypeDef()
-        this.ablilityScores = this.ablilityScores.map(ablilityScore => {
-            ablilityScore.skills = ablilityScore.skills.map(skill => 
-                skillDef.resolvers.queries.skills({}, {name: skill['name']})[0]
-            )
-            return ablilityScore
-        })
-    }
-    resolvers = {
-        queries: {
-            abilityScores: (parent, args): Array<AbilityScore> => {
-                if(args.name) {
-                    return this.ablilityScores
-                        .filter(abililtyScore =>
-                            abililtyScore.name.toLowerCase() === args.name.toLowerCase()
-                        )
-                        .map(abilityScore =>
-                            new AbilityScore(abilityScore)
-                        )
-                } else if(args.fullName) {
-                    return this.ablilityScores
-                        .filter(abililtyScore =>
-                            abililtyScore.full_name.toLowerCase() === args.fullName.toLowerCase()
-                        )
-                        .map(abilityScore =>
-                            new AbilityScore(abilityScore)
-                        )
-                } else if(args.skill) {
-                    return this.ablilityScores
-                        .filter(abililtyScore => 
-                            abililtyScore.skills.filter(score =>
-                                score['name'] === args.skill.toLowerCase()
-                            ).length
-                        )
-                        .map(abilityScore =>
-                            new AbilityScore(abilityScore)
-                        )
-                } else {
-                    return this.ablilityScores
-                        .map(abilityScore =>{
-                            return new AbilityScore(abilityScore)
-                        })
-                }
-            }
-        },
-        mutations: {}
     }
 }

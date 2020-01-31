@@ -28,23 +28,5 @@ export default class MagicSchoolsTypeDef extends BaseTypeDef {
         `, `
             magicSchools(name: String): [MagicSchool]
         `, ``)
-        this.schools = JSON.parse(fs.readFileSync(path.join(__dirname, '../sources/MagicSchools.json')).toString())
-    }
-    resolvers = {
-        queries: {
-            magicSchools: (parent, args): Array<MagicSchool> =>
-                (args.name) ?
-                    this.schools
-                        .filter(school => 
-                            school['name'].toLowerCase() === args.name.toLowerCase()
-                        ).map(school =>
-                            new MagicSchool(school)
-                        ) :
-                    this.schools
-                        .map(school =>
-                            new MagicSchool(school)
-                        )
-        },
-        mutations: {}
     }
 }

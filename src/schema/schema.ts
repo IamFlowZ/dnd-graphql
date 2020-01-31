@@ -30,7 +30,6 @@ export default class Schema {
             ${abilitiesDef.queries}
         }
         type Mutation {
-            test: String
             ${languageDef.mutations}
             ${magicSchoolDef.mutations}
             ${conditionDef.mutations}
@@ -40,22 +39,4 @@ export default class Schema {
         }
         
     `
-    resolvers = {
-        Query: {
-            ...languageDef.resolvers.queries,
-            ...magicSchoolDef.resolvers.queries,
-            ...conditionDef.resolvers.queries,
-            ...proficienciesDef.resolvers.queries,
-            ...skillsDef.resolvers.queries,
-            ...abilitiesDef.resolvers.queries
-        },
-        Mutation: {
-            ...languageDef.resolvers.mutations,
-            ...magicSchoolDef.resolvers.mutations,
-            ...conditionDef.resolvers.mutations,
-            ...proficienciesDef.resolvers.mutations,
-            ...skillsDef.resolvers.mutations,
-            ...abilitiesDef.resolvers.mutations
-        }
-    }
 }

@@ -39,31 +39,6 @@ export default class LanguageTypeDef extends BaseTypeDef {
             `, 
             ``
         )
-        this.languages = JSON.parse(fs.readFileSync(path.join(__dirname, '../sources/Languages.json')).toString())
-    }
-    resolvers = {
-        queries: {
-            languages: (parent, args): Array<Language> => {
-                if(args.name || args.script) {
-                    const property = args.name ? "name": "script"
-                    return this.languages
-                        .filter(language => 
-                            language[property].toLowerCase() === args[property].toLowerCase()
-                        )
-                        .map(language =>
-                            new Language(language)
-                        )
-                } else {
-                    return this.languages
-                        .map(language =>
-                            new Language(language)
-                        )
-                }
-            }
-        },
-        mutations: {
-
-        }
     }
 }
 

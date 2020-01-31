@@ -20,8 +20,7 @@ const driver = neo4j.driver(
 // Leaving both types of servers in until json has been entirely moved over into neo4j
 //  Neo4J
 const server = new ApolloServer({schema: modifiedSchema, context: {driver}})
-//  JSON Files
-// const server = new ApolloServer({typeDefs, resolvers, context: {driver}})
+
 const app = express()
 app.use(cors())
 app.use('/voyager', voyagerMiddleware({endpointUrl: '/graphql'}))
