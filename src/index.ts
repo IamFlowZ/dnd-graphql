@@ -1,3 +1,6 @@
+import * as fs from 'fs'
+import * as path from 'path'
+
 import express from 'express'
 import cors from 'cors'
 import {express as voyagerMiddleware} from 'graphql-voyager/middleware'
@@ -5,13 +8,10 @@ import { ApolloServer, makeExecutableSchema } from 'apollo-server-express'
 import {makeAugmentedSchema} from 'neo4j-graphql-js'
 import neo4j from "neo4j-driver"
 
-import Schema from './schema/schema'
 import seed from './seed'
-const mySchema = new Schema()
-const typeDefs = mySchema.typeDefs
 // const resolvers = mySchema.resolvers
 const modifiedSchema = makeAugmentedSchema({
-    typeDefs,
+    typeDefs: fs.readFileSync(path.join(__dirname, "./schema.graphql")).toString(),
     config: {
       query: true, // default
       mutation: false
