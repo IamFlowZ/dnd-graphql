@@ -10,7 +10,13 @@ import seed from './seed'
 const mySchema = new Schema()
 const typeDefs = mySchema.typeDefs
 // const resolvers = mySchema.resolvers
-const modifiedSchema = makeAugmentedSchema({typeDefs})
+const modifiedSchema = makeAugmentedSchema({
+    typeDefs,
+    config: {
+      query: true, // default
+      mutation: false
+    }
+  })
 
 const driver = neo4j.driver(
     'bolt://localhost:7687',
