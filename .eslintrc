@@ -18,7 +18,22 @@
         "plugin:jest/recommended",
         "plugin:import/errors",
         "plugin:import/warnings",
-        "plugin:import/typescript",
-        // "plugin:node/recommended"
+        "plugin:import/typescript"
     ],
+    "rules": {
+        "max-len": [2, 80, {
+            "ignoreComments": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+        }],
+        "@typescript-eslint/no-unused-vars": [1, {
+            "args": "none"
+        }]
+    },
+    "env": {
+        "node": true,
+        "jest": true,
+        "es2017": true,
+        "es2020": true
+    }
 }
