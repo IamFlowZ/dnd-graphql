@@ -32,14 +32,5 @@ export default class Schema {
             description: String
             abilityScore: AbilityScore
         }
-
-        type Query {
-            languages(name: String, script: String): [Language]
-            magicSchools(name: String): [MagicSchool]
-            conditions(name: String): [Condition]
-            proficiencies(type: String, name: String, class: String, race: String): [Proficiency]
-            skills(name: String, abilityScore: String): [Skill]
-            abilityScores(name: String, fullName: String, skill: String): [AbilityScore]
-        }
     `
 }
