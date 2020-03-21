@@ -30,12 +30,12 @@ export default function(): void {
     })
     languages.reduce((accu, curr) => {
         if(curr.name.length && !accu.includes(curr.name))
-            accu.push(curr.name)
+            accu.push({name: curr.name, type: curr.type})
         return accu
     }, [])
     .map(lang => {
         const session = driver.session()
-        session.run(`MERGE (a:Language {name: $name}) return a`, {name: lang})
+        session.run(`MERGE (a:Language {name: $name, type: $type}) return a`, {name: lang.name, type: lang.type})
             .then(_ => session.close())
             .catch(err => console.error(err))
     })
@@ -43,7 +43,7 @@ export default function(): void {
         const session = driver.session()
         session.run(`MATCH (a:Language{name:$langName})
         MATCH(b:Script{name:$scriptName})
-        MERGE (b) - [c:HAS_SCRIPT] -> (a)
+        CREATE (b) <- [c:HAS_SCRIPT] - (a)
         return c`, {
             langName: lang.name,
             scriptName: lang.script

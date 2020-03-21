@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext .ts",
-    "local": "nodemon src/index.ts"
+    "local": "nodemon src/index.ts",
+    "start": "nodemon src/index.ts",
+    "author": "npx dakotalewallen"
   },
   "keywords": [],
   "author": "Dakota Lewallen",
