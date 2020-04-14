@@ -17,7 +17,7 @@ return a, b;
 `;
 
 const classes = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Classes.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Classes.json")).toString()
 );
 
 export default async function (): Promise<void> {

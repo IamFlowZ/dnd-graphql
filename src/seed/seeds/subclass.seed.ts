@@ -9,7 +9,7 @@ const driver = neo4j.driver(
 );
 
 const subclasses = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Subclasses.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Subclasses.json")).toString()
 );
 
 const CREATE_SUBCLASS = `

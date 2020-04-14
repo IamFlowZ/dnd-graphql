@@ -15,7 +15,7 @@ CREATE (a:Condition {
 }) RETURN a
 `;
 const conditions = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Conditions.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Conditions.json")).toString()
 );
 
 export default function () {

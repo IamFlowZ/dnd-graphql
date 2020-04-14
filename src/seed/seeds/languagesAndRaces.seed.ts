@@ -9,10 +9,10 @@ const driver = neo4j.driver(
 );
 
 const races = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Races.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Races.json")).toString()
 );
 const languages = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Languages.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Languages.json")).toString()
 );
 
 /**

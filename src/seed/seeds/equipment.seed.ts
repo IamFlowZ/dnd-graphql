@@ -10,11 +10,11 @@ const driver = neo4j.driver(
 
 const categories = JSON.parse(
   fs
-    .readFileSync(path.join(__dirname, "./sources/EquipmentCategories.json"))
+    .readFileSync(path.join(__dirname, "../sources/EquipmentCategories.json"))
     .toString()
 );
 const equipment = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Equipment.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Equipment.json")).toString()
 );
 
 export default function () {}

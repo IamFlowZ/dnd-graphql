@@ -17,7 +17,7 @@ CREATE (a) - [:HAS_TRAIT] -> (b)
 `;
 
 const traits = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Traits.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Traits.json")).toString()
 );
 
 export default async function () {

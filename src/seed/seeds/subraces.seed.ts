@@ -9,7 +9,7 @@ const driver = neo4j.driver(
 );
 
 const subraces = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Subraces.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Subraces.json")).toString()
 );
 
 const CREATE_SUBRACE = `

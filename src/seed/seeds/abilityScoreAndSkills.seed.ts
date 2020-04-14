@@ -35,11 +35,11 @@ const createRels = (skillNames) => `
 
 const ablilityScores = JSON.parse(
   fs
-    .readFileSync(path.join(__dirname, "./sources/AbilityScores.json"))
+    .readFileSync(path.join(__dirname, "../sources/AbilityScores.json"))
     .toString()
 );
 const skills = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/Skills.json")).toString()
+  fs.readFileSync(path.join(__dirname, "../sources/Skills.json")).toString()
 );
 
 export default function () {

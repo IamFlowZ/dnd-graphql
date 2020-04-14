@@ -11,7 +11,7 @@ const driver = neo4j.driver(
 const createWeaponProperty = `CREATE (a:WeaponProperty{name:$name, description: $desc}) return a;`;
 const props = JSON.parse(
   fs
-    .readFileSync(path.join(__dirname, "./sources/WeaponProperties.json"))
+    .readFileSync(path.join(__dirname, "../sources/WeaponProperties.json"))
     .toString()
 );
 

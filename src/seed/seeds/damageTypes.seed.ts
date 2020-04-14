@@ -10,7 +10,9 @@ const driver = neo4j.driver(
 
 const createDmgType = `CREATE (a:DamageType{name:$name, description: $desc})`;
 const dmgTypes = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./sources/DamageTypes.json")).toString()
+  fs
+    .readFileSync(path.join(__dirname, "../sources/DamageTypes.json"))
+    .toString()
 );
 
 export default function () {
