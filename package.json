@@ -7,7 +7,8 @@
     "test": "jest",
     "lint": "eslint . --ext .ts",
     "start": "nodemon src/index.ts",
-    "author": "npx dakotalewallen"
+    "author": "npx dakotalewallen",
+    "seedDb": "ts-node src/seed/index.ts"
   },
   "keywords": [],
   "author": "Dakota Lewallen",
