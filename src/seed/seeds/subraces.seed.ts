@@ -22,21 +22,25 @@ CREATE (b:Subrace{
 	(b) - [:SUBRACE_OF] -> (a)
 `;
 
-const SUBRACE_SPEAKS = (languages: string): string => `
+const SUBRACE_SPEAKS = `
 MATCH (a:Subrace{name:$name}),
 	(b:Language)
-WHERE b.name IN [${languages}]
+WHERE b.name IN $languages
 CREATE (a) - [:SPEAKS] -> (b)
 `;
 
-export default function () {
-  const createSubraces = subraces.map((subrace) => {
+export default async function () {
+  const createSubraces = await subraces.map(async (subrace) => {
     const session = driver.session();
-    return session.run(CREATE_SUBRACE, {
+    await session.run(CREATE_SUBRACE, {
       raceName: subrace.race.name,
       name: subrace.name,
       desc: subrace.desc,
     });
+    await session.close();
+    return true;
   });
-  Promise.all(createSubraces).catch((err) => console.error(err));
+  await Promise.all(createSubraces).catch((err) => console.error(err));
+  await driver.close();
+  return true;
 }
