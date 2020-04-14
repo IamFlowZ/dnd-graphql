@@ -2,6 +2,7 @@ import conditionSeed from "./conditions.seed";
 import abilityAndSkills from "./abilityScoreAndSkills.seed";
 import langsAndRaces from "./languagesAndRaces.seed";
 import subrace from "./subraces.seed";
+import trait from "./traits.seed";
 import classes from "./class.seed";
 import subclass from "./subclass.seed";
 import weaponProperties from "./weaponProperties.seed";
@@ -17,6 +18,7 @@ import profs from "./proficencies.seed";
 // profs();
 // subclass();
 // subrace();
+// trait();
 console.log(
   "call the functions of the information you would like to seed here.",
   __filename
