@@ -9,17 +9,20 @@ import weaponProperties from "./weaponProperties.seed";
 import dmgTypes from "./damageTypes.seed";
 import profs from "./proficencies.seed";
 
-// conditionSeed();
-// abilityAndSkills();
-// langsAndRaces();
-// classes();
-// weaponProperties();
-// dmgTypes();
-// profs();
-// subclass();
-// subrace();
-// trait();
+(async () => {
+  // await conditionSeed();
+  // await abilityAndSkills();
+  // await langsAndRaces();
+  // await classes();
+  // await weaponProperties();
+  // await dmgTypes();
+  // await profs();
+  // await subclass();
+  // await subrace();
+  // await trait();
+})().then((res) => console.log("done"));
+
 console.log(
-  "call the functions of the information you would like to seed here.",
+  "call the functions of the information you would like to seed here.\n",
   __filename
 );
