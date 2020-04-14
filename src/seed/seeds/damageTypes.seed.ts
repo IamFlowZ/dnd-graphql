@@ -15,12 +15,14 @@ const dmgTypes = JSON.parse(
     .toString()
 );
 
-export default function () {
-  dmgTypes.map((dmgType) => {
+export default async function () {
+  const createDamages = await dmgTypes.map(async (dmgType) => {
     const session = driver.session();
-    session
-      .run(createDmgType, dmgType)
-      .then((res) => session.close())
-      .catch((err) => console.error("Error while create damage type: ", err));
+    await session.run(createDmgType, dmgType);
+    await session.close();
+    return true;
   });
+  await Promise.all(createDamages).catch((err) => console.error(err));
+  await driver.close();
+  return true;
 }
