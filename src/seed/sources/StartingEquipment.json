@@ -59,9 +59,7 @@
 			"item": {  "name": "Dart"}, "quantity": 1}, {
 			"item": {  "name": "Shortbow"}, "quantity": 1}, {
 			"item": {  "name": "Sling"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -130,9 +128,7 @@
 			"item": {  "name": "Pan flute"}, "quantity": 1}, {
 			"item": {  "name": "Shawm"}, "quantity": 1}, {
 			"item": {  "name": "Viol"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -220,9 +216,7 @@
 			"item": {  "name": "Amulet"}, "quantity": 1}, {
 			"item": {  "name": "Emblem"}, "quantity": 1}, {
 			"item": {  "name": "Reliquary"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -284,9 +278,7 @@
 			"item": {  "name": "Totem"}, "quantity": 1}, {
 			"item": {  "name": "Wooden staff"}, "quantity": 1}, {
 			"item": {  "name": "Yew wand"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -390,9 +382,7 @@
 			"item": {  "name": "Crossbow, heavy"}, "quantity": 1}, {
 			"item": {  "name": "Longbow"}, "quantity": 1}, {
 			"item": {  "name": "Net"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -435,9 +425,7 @@
 		"type": "equipment",
 		"from": [{
 			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -549,9 +537,7 @@
 			"item": {  "name": "Crossbow, heavy"}, "quantity": 1}, {
 			"item": {  "name": "Longbow"}, "quantity": 1}, {
 			"item": {  "name": "Net"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -602,9 +588,7 @@
 		"type": "equipment",
 		"from": [{
 			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -653,9 +637,7 @@
 		"type": "equipment",
 		"from": [{
 			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -714,9 +696,7 @@
 		"type": "equipment",
 		"from": [{
 			"item": {  "name": "Explorer's Pack"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -795,9 +775,7 @@
 			"item": {  "name": "Dart"}, "quantity": 1}, {
 			"item": {  "name": "Shortbow"}, "quantity": 1}, {
 			"item": {  "name": "Sling"}, "quantity": 1}]
-	}],
-	
-}, {
+	}]}, {
 	
 	"class": {
 		
@@ -842,6 +820,4 @@
 		"type": "equipment",
 		"from": [{
 			"item": {  "name": "Dungeoneer's Pack"}, "quantity": 1}]
-	}],
-	
-}]
+	}]}]
