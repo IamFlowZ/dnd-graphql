@@ -20,21 +20,21 @@ const traits = JSON.parse(
   fs.readFileSync(path.join(__dirname, "./sources/Traits.json")).toString()
 );
 
-export default function () {
-  traits.map((trait) => {
-    driver
-      .session()
-      .run(CREATE_TRAIT, {
-        races: trait.races.reduce((accu, curr, i) => {
-          accu.push(curr.name);
-          return accu;
-        }, []),
-        name: trait.name,
-        desc: trait.desc,
-      })
-      .then((res) => console.log(res.summary.query.parameters))
-      .catch((err) => console.error(err));
+export default async function () {
+  const createTraits = traits.map(async (trait) => {
+    const session = driver.session();
+    await session.run(CREATE_TRAIT, {
+      races: trait.races.reduce((accu, curr) => {
+        accu.push(curr.name);
+        return accu;
+      }, []),
+      name: trait.name,
+      desc: trait.desc,
+    });
+    await session.close();
+    return true;
   });
-  // Promise.all(createTraits).catch((err) => console.error(err));
+  await Promise.all(createTraits);
+  await driver.close();
   return true;
 }
