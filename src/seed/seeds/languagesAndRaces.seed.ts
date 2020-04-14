@@ -15,86 +15,86 @@ const languages = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Languages.json")).toString()
 );
 
-/**
- * TODO: Not a big fan of how many times this has to loop over the same data.
- * However this seems to be the most effective way to get data into the database without recreating nodes
- * Hopefully in the future this can be optimized.
- * */
-export default function (): void {
-  languages
+export default async function () {
+  const createScripts = await languages
     .reduce((accu, curr) => {
       if (curr.script.length && !accu.includes(curr.script))
         accu.push(curr.script);
       return accu;
     }, [])
-    .map((script) => {
+    .map(async (script) => {
       const session = driver.session();
-      session
-        .run(`MERGE (a:Script {name: $name}) return a`, { name: script })
-        .then((_) => session.close())
-        .catch((err) => console.error(err));
+      await session.run(`CREATE (a:Script {name: $name})`, { name: script });
+      await session.close();
+      return true;
     });
-  languages
+  await Promise.all(createScripts).catch((err) => console.error(err));
+
+  const createLanguages = await languages
     .reduce((accu, curr) => {
       if (curr.name.length && !accu.includes(curr.name))
         accu.push({ name: curr.name, type: curr.type });
       return accu;
     }, [])
-    .map((lang) => {
+    .map(async (lang) => {
       const session = driver.session();
-      session
-        .run(`MERGE (a:Language {name: $name, type: $type}) return a`, {
-          name: lang.name,
-          type: lang.type,
-        })
-        .then((_) => session.close())
-        .catch((err) => console.error(err));
+      await session.run(`CREATE (a:Language {name: $name, type: $type})`, {
+        name: lang.name,
+        type: lang.type,
+      });
+      await session.close();
+      return true;
     });
-  languages.map((lang) => {
+  await Promise.all(createLanguages).catch((err) => console.error(err));
+
+  const relateLanguagesScripts = await languages.map(async (lang) => {
     const session = driver.session();
-    session
-      .run(
-        `MATCH (a:Language{name:$langName})
+    await session.run(
+      `MATCH (a:Language{name:$langName})
         MATCH(b:Script{name:$scriptName})
-        CREATE (b) <- [c:HAS_SCRIPT] - (a)
-        return c`,
-        {
-          langName: lang.name,
-          scriptName: lang.script,
-        }
-      )
-      .then((_) => session.close())
-      .catch((err) => console.error(err));
+        CREATE (b) <- [c:HAS_SCRIPT] - (a)`,
+      {
+        langName: lang.name,
+        scriptName: lang.script,
+      }
+    );
+    await session.close();
+    return true;
   });
-  races
+  await Promise.all(relateLanguagesScripts).catch((err) => console.error(err));
+
+  const createRaces = await races
     .reduce((accu, curr) => {
       if (curr.name.length && !accu.includes(curr.name)) accu.push(curr.name);
       return accu;
     }, [])
-    .map((name) => {
+    .map(async (name) => {
       const session = driver.session();
-      session
-        .run(`MERGE (a:Race {name: $name})`, { name })
-        .then((_) => session.close())
-        .catch((err) => console.error(err));
+      await session.run(`CREATE (a:Race {name: $name})`, { name });
+      await session.close();
+      return true;
     });
-  races.map((race) => {
-    race.languages.map((lang) => {
+  await Promise.all(createRaces).catch((err) => console.error(err));
+
+  const allOfThem = await races.map(async (race) => {
+    const relateLangsRaces = await race.languages.map(async (lang) => {
       const session = driver.session();
-      session
-        .run(
-          `MATCH(a:Language {name:$langName})
+      await session.run(
+        `MATCH(a:Language {name:$langName})
             MATCH(b:Race {name:$raceName})
-            MERGE (b) - [c:SPEAKS] -> (a)
-            return c
+            CREATE (b) - [c:SPEAKS] -> (a)
             `,
-          {
-            langName: lang.name,
-            raceName: race.name,
-          }
-        )
-        .then((_) => session.close())
-        .catch((err) => console.error(err));
+        {
+          langName: lang.name,
+          raceName: race.name,
+        }
+      );
+      await session.close();
+      return true;
     });
+    await Promise.all(relateLangsRaces).catch((err) => console.error(err));
   });
+  await Promise.all(allOfThem).catch((err) => console.error(err));
+  await driver.close();
+  return true;
 }
