@@ -1,13 +1,13 @@
-import conditionSeed from "./conditions.seed";
-import abilityAndSkills from "./abilityScoreAndSkills.seed";
-import langsAndRaces from "./languagesAndRaces.seed";
-import subrace from "./subraces.seed";
-import trait from "./traits.seed";
-import classes from "./class.seed";
-import subclass from "./subclass.seed";
-import weaponProperties from "./weaponProperties.seed";
-import dmgTypes from "./damageTypes.seed";
-import profs from "./proficencies.seed";
+import conditionSeed from "./seeds/conditions.seed";
+import abilityAndSkills from "./seeds/abilityScoreAndSkills.seed";
+import langsAndRaces from "./seeds/languagesAndRaces.seed";
+import subrace from "./seeds/subraces.seed";
+import trait from "./seeds/traits.seed";
+import classes from "./seeds/class.seed";
+import subclass from "./seeds/subclass.seed";
+import weaponProperties from "./seeds/weaponProperties.seed";
+import dmgTypes from "./seeds/damageTypes.seed";
+import profs from "./seeds/proficencies.seed";
 
 (async () => {
   // await conditionSeed();

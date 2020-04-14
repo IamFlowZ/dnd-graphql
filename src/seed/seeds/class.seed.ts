@@ -20,7 +20,7 @@ const classes = JSON.parse(
   fs.readFileSync(path.join(__dirname, "./sources/Classes.json")).toString()
 );
 
-export default function (): void {
+export default async function (): Promise<void> {
   const reducer = (accu, curr, i) => {
     if (i === 0) {
       return `'${curr.name}'`;
