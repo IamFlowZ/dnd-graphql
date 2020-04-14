@@ -19,15 +19,19 @@ CREATE (b:Subclass{name:$name, flavor:$flavor, description:$desc}),
 	(b) - [:SUBCLASS_OF] -> (a)
 `;
 
-export default function () {
-  const createSubclasses = subclasses.map((subclass) => {
+export default async function () {
+  const createSubclasses = await subclasses.map(async (subclass) => {
     const session = driver.session();
-    return session.run(CREATE_SUBCLASS, {
+    await session.run(CREATE_SUBCLASS, {
       className: subclass.class.name,
       name: subclass.name,
       desc: subclass.desc,
       flavor: subclass.subclass_flavor,
     });
+    await session.close();
+    return true;
   });
-  Promise.all(createSubclasses).catch((err) => console.error(err));
+  await Promise.all(createSubclasses).catch((err) => console.error(err));
+  await driver.close();
+  return true;
 }
