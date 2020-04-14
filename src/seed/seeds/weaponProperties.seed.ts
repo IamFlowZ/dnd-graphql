@@ -15,12 +15,14 @@ const props = JSON.parse(
     .toString()
 );
 
-export default function () {
-  props.map((property) => {
+export default async function () {
+  const createProps = await props.map(async (property) => {
     const session = driver.session();
-    session
-      .run(createWeaponProperty, { ...property })
-      .then((res) => session.close)
-      .catch((err) => console.error("Couldn't create property: ", err));
+    await session.run(createWeaponProperty, { ...property });
+    await session.close();
+    return true;
   });
+  await Promise.all(createProps).catch((err) => console.error(err));
+  await driver.close();
+  return true;
 }
