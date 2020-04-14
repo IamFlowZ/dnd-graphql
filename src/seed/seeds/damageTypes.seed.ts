@@ -18,7 +18,10 @@ const dmgTypes = JSON.parse(
 export default async function () {
   const createDamages = await dmgTypes.map(async (dmgType) => {
     const session = driver.session();
-    await session.run(createDmgType, dmgType);
+    await session.run(createDmgType, {
+      name: dmgType.name,
+      desc: dmgType.desc[0],
+    });
     await session.close();
     return true;
   });

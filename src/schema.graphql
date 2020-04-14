@@ -28,7 +28,7 @@ type Language {
 
 type AbilityScore {
   name: ID!
-  fullName: String
+  shortName: String
   description: String
   notes: String
   skills: [Skill] @relation(name: "HAS_SKILL", direction: "OUT")
@@ -70,12 +70,15 @@ type Subclass {
 
 type WeaponProperty {
   name: ID!
+  description: [String]
 }
 
 type DamageType {
   name: ID!
+  description: String
 }
 
 type Condition {
   name: ID!
+  description: String
 }
