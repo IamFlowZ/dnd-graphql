@@ -23,7 +23,7 @@ CREATE (a: AbilityScore {
 })
 `;
 
-const createRels = skillNames => `
+const createRels = (skillNames) => `
     MATCH (a: AbilityScore)
     WHERE a.name = $abilityName
     MATCH (b: Skill)
@@ -35,34 +35,34 @@ const createRels = skillNames => `
 
 const ablilityScores = JSON.parse(
   fs
-    .readFileSync(path.join(__dirname, "../sources/AbilityScores.json"))
+    .readFileSync(path.join(__dirname, "./sources/AbilityScores.json"))
     .toString()
 );
 const skills = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../sources/Skills.json")).toString()
+  fs.readFileSync(path.join(__dirname, "./sources/Skills.json")).toString()
 );
 
-export default function() {
-  const createScores = ablilityScores.map(abilityScore => {
+export default function () {
+  const createScores = ablilityScores.map((abilityScore) => {
     const session = driver.session();
     return session.run(createAbilityScore, {
       abilityName: abilityScore.full_name,
       shortName: abilityScore.name,
-      desc: abilityScore.desc.reduce((accu, curr) => `${accu} ${curr}`)
+      desc: abilityScore.desc.reduce((accu, curr) => `${accu} ${curr}`),
     });
   });
-  Promise.all(createScores).catch(err => console.error(err));
-  const createSkills = skills.map(skill => {
+  Promise.all(createScores).catch((err) => console.error(err));
+  const createSkills = skills.map((skill) => {
     const session = driver.session();
     return session.run(createSkill, {
       skillName: skill.name,
-      desc: skill.desc.reduce((accu, curr) => `${accu} ${curr}`)
+      desc: skill.desc.reduce((accu, curr) => `${accu} ${curr}`),
     });
   });
-  Promise.all(createSkills).catch(err => console.error(err));
-  const abilitySkillRels = ablilityScores.map(ability => {
+  Promise.all(createSkills).catch((err) => console.error(err));
+  const abilitySkillRels = ablilityScores.map((ability) => {
     const abilitySkills = skills
-      .filter(skill => skill.ability_score.name === ability.name)
+      .filter((skill) => skill.ability_score.name === ability.name)
       .reduce((accu, curr, i) => {
         if (i === 0) {
           return `'${curr.name}'`;
@@ -73,10 +73,10 @@ export default function() {
     if (abilitySkills.length) {
       const session = driver.session();
       return session.run(createRels(abilitySkills), {
-        abilityName: ability.full_name
+        abilityName: ability.full_name,
       });
     }
     return null;
   });
-  Promise.all(abilitySkillRels).catch(err => console.error(err));
+  Promise.all(abilitySkillRels).catch((err) => console.error(err));
 }

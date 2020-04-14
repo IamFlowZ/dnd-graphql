@@ -8,7 +8,7 @@ const driver = neo4j.driver(
   neo4j.auth.basic("neo4j", "letmein")
 );
 
-const createClass = abilityScores => `
+const createClass = (abilityScores) => `
 MATCH (b:AbilityScore)
 WHERE b.shortName IN [${abilityScores}]
 MERGE (a:Class{name:$name, hitDie: $hitDie})
@@ -17,10 +17,10 @@ return a, b;
 `;
 
 const classes = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../sources/Classes.json")).toString()
+  fs.readFileSync(path.join(__dirname, "./sources/Classes.json")).toString()
 );
 
-export default function(): void {
+export default function (): void {
   const reducer = (accu, curr, i) => {
     if (i === 0) {
       return `'${curr.name}'`;
@@ -31,12 +31,12 @@ export default function(): void {
     const savingThrowNames = pClass["saving_throws"].reduce(reducer, "");
     const createParams = {
       name: pClass.name,
-      hitDie: pClass.hit_die
+      hitDie: pClass.hit_die,
     };
     const session = driver.session();
     session
       .run(createClass(savingThrowNames), createParams)
-      .then(res => session.close())
-      .catch(err => console.error("Couldn't create class: ", err));
+      .then((res) => session.close())
+      .catch((err) => console.error("Couldn't create class: ", err));
   });
 }

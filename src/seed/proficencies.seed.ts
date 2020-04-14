@@ -10,7 +10,7 @@ const driver = neo4j.driver(
 
 const proficiencies = JSON.parse(
   fs
-    .readFileSync(path.join(__dirname, "../sources/Proficiencies.json"))
+    .readFileSync(path.join(__dirname, "./sources/Proficiencies.json"))
     .toString()
 );
 

@@ -11,16 +11,16 @@ const driver = neo4j.driver(
 const createWeaponProperty = `CREATE (a:WeaponProperty{name:$name, description: $desc}) return a;`;
 const props = JSON.parse(
   fs
-    .readFileSync(path.join(__dirname, "../sources/WeaponProperties.json"))
+    .readFileSync(path.join(__dirname, "./sources/WeaponProperties.json"))
     .toString()
 );
 
-export default function() {
-  props.map(property => {
+export default function () {
+  props.map((property) => {
     const session = driver.session();
     session
       .run(createWeaponProperty, { ...property })
-      .then(res => session.close)
-      .catch(err => console.error("Couldn't create property: ", err));
+      .then((res) => session.close)
+      .catch((err) => console.error("Couldn't create property: ", err));
   });
 }
