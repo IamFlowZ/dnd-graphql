@@ -18,15 +18,17 @@ const conditions = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Conditions.json")).toString()
 );
 
-export default function () {
-  conditions.map(async (condition) => {
+export default async function () {
+  const createConditions = conditions.map(async (condition) => {
     const session = driver.session();
-    return session
-      .run(createCondition, {
-        name: condition.name,
-        desc: condition.desc.reduce((accu, curr) => `${accu} ${curr}`),
-      })
-      .then((_) => session.close())
-      .catch((err) => console.error(err));
+    await session.run(createCondition, {
+      name: condition.name,
+      desc: condition.desc.reduce((accu, curr) => `${accu} ${curr}`),
+    });
+    await session.close();
+    return true;
   });
+  await Promise.all(createConditions).catch((err) => console.error(err));
+  await driver.close();
+  return true;
 }
