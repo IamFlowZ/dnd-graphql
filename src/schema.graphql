@@ -1,46 +1,81 @@
 type Race {
-  name: String
+  name: ID!
   speaks: [Language] @relation(name: "SPEAKS", direction: "OUT")
+  traits: [Trait] @relation(name: "HAS_TRAIT", direction: "OUT")
+  subraces: [Subrace] @relation(name: "HAS_SUBRACE", direction: "OUT")
 }
+
+type Subrace {
+  name: ID!
+  belongsTo: Race @relation(name: "SUBRACE_OF", direction: "OUT")
+}
+
+type Trait {
+  name: ID!
+}
+
 type Script {
-  name: String
+  name: ID!
   usedBy: [Language] @relation(name: "HAS_SCRIPT", direction: "IN")
 }
+
 type Language {
-  name: String
+  name: ID!
   type: String
   script: Script @relation(name: "HAS_SCRIPT", direction: "OUT")
   typicalSpeakers: [Race] @relation(name: "SPEAKS", direction: "IN")
 }
+
 type AbilityScore {
-  name: String
+  name: ID!
   fullName: String
   description: String
   notes: String
-  skills: [Skill]
+  skills: [Skill] @relation(name: "HAS_SKILL", direction: "OUT")
 }
+
 type Condition {
-  name: String
+  name: ID!
   description: String
 }
+
 type MagicSchool {
-  name: String
+  name: ID!
   description: String
 }
+
 type Proficiency {
   type: String
-  name: String
+  name: ID!
   classes: [String]
   races: [String]
 }
 type Skill {
-  name: String
+  name: ID!
   description: String
-  abilityScore: AbilityScore
+  abilityScore: AbilityScore @relation(name: "ABILITY", direction: "OUT")
 }
 
 type Class {
-  name: String
+  name: ID!
   hitDie: String
-  savingThrows: [AbilityScore]
+  savingThrows: [AbilityScore] @relation(name: "SAVES_WITH", direction: "OUT")
+  subclasses: [Subclass] @relation(name: "HAS_SUBCLASS", direction: "OUT")
+}
+
+type Subclass {
+  name: ID!
+  belongsTo: Class @relation(name: "SUBCLASS_OF", direction: "OUT")
+}
+
+type WeaponProperty {
+  name: ID!
+}
+
+type DamageType {
+  name: ID!
+}
+
+type Condition {
+  name: ID!
 }
