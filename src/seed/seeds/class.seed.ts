@@ -8,9 +8,9 @@ const driver = neo4j.driver(
   neo4j.auth.basic("neo4j", "letmein")
 );
 
-const createClass = (abilityScores) => `
+const createClass = `
 MATCH (b:AbilityScore)
-WHERE b.shortName IN [${abilityScores}]
+WHERE b.shortName IN $abilityScores
 MERGE (a:Class{name:$name, hitDie: $hitDie})
 MERGE (a) - [:SAVES_WITH] -> (b)
 return a, b;
@@ -20,23 +20,24 @@ const classes = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Classes.json")).toString()
 );
 
-export default async function (): Promise<void> {
-  const reducer = (accu, curr, i) => {
-    if (i === 0) {
-      return `'${curr.name}'`;
-    }
-    return `${accu}, '${curr.name}'`;
+export default async function () {
+  const reducer = (accu, curr) => {
+    accu.push(curr.name);
+    return accu;
   };
-  classes.map((pClass): void => {
-    const savingThrowNames = pClass["saving_throws"].reduce(reducer, "");
+  const createClasses = classes.map(async (pClass) => {
     const createParams = {
+      abilityScores: pClass.saving_throws.reduce(reducer, []),
       name: pClass.name,
       hitDie: pClass.hit_die,
     };
     const session = driver.session();
-    session
-      .run(createClass(savingThrowNames), createParams)
-      .then((res) => session.close())
-      .catch((err) => console.error("Couldn't create class: ", err));
+    const results = await session.run(createClass, createParams);
+    console.log(results);
+    await session.close();
+    return true;
   });
+  await Promise.all(createClasses).catch((err) => console.error(err));
+  await driver.close();
+  return true;
 }

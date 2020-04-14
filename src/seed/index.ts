@@ -10,10 +10,10 @@ import dmgTypes from "./seeds/damageTypes.seed";
 import profs from "./seeds/proficencies.seed";
 
 (async () => {
-  // await conditionSeed();
   // await abilityAndSkills();
-  // await langsAndRaces();
   // await classes();
+  // await conditionSeed();
+  // await langsAndRaces();
   // await weaponProperties();
   // await dmgTypes();
   // await profs();

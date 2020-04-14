@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j, { session } from "neo4j-driver";
+import neo4j from "neo4j-driver";
 
 const driver = neo4j.driver(
   "bolt://localhost:7687",
@@ -23,17 +23,17 @@ CREATE (a: AbilityScore {
 })
 `;
 
-const createRels = (skillNames) => `
+const createRels = `
     MATCH (a: AbilityScore)
     WHERE a.name = $abilityName
     MATCH (b: Skill)
-    WHERE b.name IN [${skillNames}]
+    WHERE b.name IN $skillNames
     CREATE (a) - [ra: HAS_SKILL] -> (b)
     CREATE (b) - [rb: ABILITY] -> (a)
     return a.name
 `;
 
-const ablilityScores = JSON.parse(
+const abilityScores = JSON.parse(
   fs
     .readFileSync(path.join(__dirname, "../sources/AbilityScores.json"))
     .toString()
@@ -42,25 +42,31 @@ const skills = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Skills.json")).toString()
 );
 
-export default function () {
-  const createScores = ablilityScores.map((abilityScore) => {
+export default async function () {
+  const createScores = abilityScores.map(async (abilityScore) => {
     const session = driver.session();
-    return session.run(createAbilityScore, {
+    await session.run(createAbilityScore, {
       abilityName: abilityScore.full_name,
       shortName: abilityScore.name,
       desc: abilityScore.desc.reduce((accu, curr) => `${accu} ${curr}`),
     });
+    await session.close();
+    return true;
   });
-  Promise.all(createScores).catch((err) => console.error(err));
-  const createSkills = skills.map((skill) => {
+  await Promise.all(createScores).catch((err) => console.error(err));
+
+  const createSkills = skills.map(async (skill) => {
     const session = driver.session();
-    return session.run(createSkill, {
+    await session.run(createSkill, {
       skillName: skill.name,
       desc: skill.desc.reduce((accu, curr) => `${accu} ${curr}`),
     });
+    await session.close();
+    return true;
   });
-  Promise.all(createSkills).catch((err) => console.error(err));
-  const abilitySkillRels = ablilityScores.map((ability) => {
+  await Promise.all(createSkills).catch((err) => console.error(err));
+
+  const abilitySkillRels = abilityScores.map(async (ability) => {
     const abilitySkills = skills
       .filter((skill) => skill.ability_score.name === ability.name)
       .reduce((accu, curr, i) => {
@@ -72,11 +78,20 @@ export default function () {
       }, "");
     if (abilitySkills.length) {
       const session = driver.session();
-      return session.run(createRels(abilitySkills), {
+      await session.run(createRels, {
         abilityName: ability.full_name,
+        skillNames: ability.skills.reduce((accu, curr) => {
+          accu.push(curr.name);
+          return accu;
+        }, []),
       });
+      await session.close();
+      return true;
     }
     return null;
   });
-  Promise.all(abilitySkillRels).catch((err) => console.error(err));
+  await Promise.all(abilitySkillRels).catch((err) => console.error(err));
+
+  await driver.close();
+  return true;
 }
