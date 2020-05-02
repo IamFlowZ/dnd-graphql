@@ -17,4 +17,18 @@ const equipment = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Equipment.json")).toString()
 );
 
-export default function () {}
+export default async function () {
+  const createEquipment = categories.map(async (category) => {
+    const fullEquipmentList = category.equipment.map(
+      (item) => equipment.filter((fullItem) => fullItem.name === item.name)[0]
+    );
+    fullEquipmentList.map(async (completeItem) => {
+      const session = driver.session();
+      await session.run(`CREATE (a:Equipment:${category.name}{name:})`, {});
+      await session.close();
+      return true;
+    });
+  });
+  await Promise.all(createEquipment).catch((err) => console.error(err));
+  return true;
+}
