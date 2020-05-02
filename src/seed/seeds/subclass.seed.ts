@@ -19,7 +19,7 @@ CREATE (b:Subclass{name:$name, flavor:$flavor, description:$desc}),
 	(b) - [:SUBCLASS_OF] -> (a)
 `;
 
-export default async function () {
+async function createSubclasses() {
   const createSubclasses = await subclasses.map(async (subclass) => {
     const session = driver.session();
     await session.run(CREATE_SUBCLASS, {
@@ -35,3 +35,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createSubclasses;

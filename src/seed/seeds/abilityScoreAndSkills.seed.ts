@@ -42,7 +42,7 @@ const skills = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Skills.json")).toString()
 );
 
-export default async function () {
+async function createAbilities() {
   const createScores = abilityScores.map(async (abilityScore) => {
     const session = driver.session();
     await session.run(createAbilityScore, {
@@ -95,3 +95,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createAbilities;

@@ -18,7 +18,7 @@ const conditions = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Conditions.json")).toString()
 );
 
-export default async function () {
+async function createConditions() {
   const createConditions = conditions.map(async (condition) => {
     const session = driver.session();
     await session.run(createCondition, {
@@ -32,3 +32,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createConditions;

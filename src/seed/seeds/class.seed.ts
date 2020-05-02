@@ -20,7 +20,7 @@ const classes = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Classes.json")).toString()
 );
 
-export default async function () {
+async function createClasses() {
   const reducer = (accu, curr) => {
     accu.push(curr.name);
     return accu;
@@ -41,3 +41,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createClasses;

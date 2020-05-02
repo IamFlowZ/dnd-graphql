@@ -15,7 +15,7 @@ const props = JSON.parse(
     .toString()
 );
 
-export default async function () {
+async function createWeaponProps() {
   const createProps = await props.map(async (property) => {
     const session = driver.session();
     await session.run(createWeaponProperty, { ...property });
@@ -26,3 +26,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createWeaponProps;

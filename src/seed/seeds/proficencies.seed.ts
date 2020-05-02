@@ -23,7 +23,7 @@ WITH b, CASE WHEN ['Race', 'Class'] IN LABELS(b)
 CREATE (b) - [:HAS_PROF] -> (a)
 `;
 
-export default function () {
+function createProficiencies() {
   const createProfs = proficiencies.map((prof) => {
     if (!(prof.type === "Skills" || prof.type === "Saving Throws")) {
       const session = driver.session();
@@ -65,3 +65,4 @@ export default function () {
   });
   // Promise.all(relateProfs).catch(err => console.error(err));
 }
+export default createProficiencies;

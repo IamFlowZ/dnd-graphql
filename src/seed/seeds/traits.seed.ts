@@ -20,7 +20,7 @@ const traits = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Traits.json")).toString()
 );
 
-export default async function () {
+async function createTraits() {
   const createTraits = traits.map(async (trait) => {
     const session = driver.session();
     await session.run(CREATE_TRAIT, {
@@ -38,3 +38,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createTraits;

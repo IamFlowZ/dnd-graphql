@@ -29,7 +29,7 @@ WHERE b.name IN $languages
 CREATE (a) - [:SPEAKS] -> (b)
 `;
 
-export default async function () {
+async function createSubraces() {
   const createSubraces = await subraces.map(async (subrace) => {
     const session = driver.session();
     await session.run(CREATE_SUBRACE, {
@@ -44,3 +44,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createSubraces;

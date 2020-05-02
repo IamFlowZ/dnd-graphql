@@ -15,7 +15,7 @@ const languages = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Languages.json")).toString()
 );
 
-export default async function () {
+async function createLanguages() {
   const createScripts = await languages
     .reduce((accu, curr) => {
       if (curr.script.length && !accu.includes(curr.script))
@@ -98,3 +98,5 @@ export default async function () {
   await driver.close();
   return true;
 }
+
+export default createLanguages;
