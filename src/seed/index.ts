@@ -8,6 +8,7 @@ import subclass from "./seeds/subclass.seed";
 import subrace from "./seeds/subraces.seed";
 import trait from "./seeds/traits.seed";
 import weaponProperties from "./seeds/weaponProperties.seed";
+import currencies from "./seeds/currency.seed";
 
 (async () => {
   // await abilityAndSkills();
@@ -20,6 +21,7 @@ import weaponProperties from "./seeds/weaponProperties.seed";
   // await subclass();
   // await subrace();
   // await trait();
+  // await currencies();
 })().then((res) => console.log("done"));
 
 console.log(
