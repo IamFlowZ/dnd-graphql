@@ -4,17 +4,16 @@ import * as path from "path";
 import express from "express";
 import cors from "cors";
 import { express as voyagerMiddleware } from "graphql-voyager/middleware";
-import { ApolloServer, makeExecutableSchema } from "apollo-server-express";
+import { ApolloServer } from "apollo-server-express";
 import { makeAugmentedSchema } from "neo4j-graphql-js";
 import neo4j from "neo4j-driver";
 
-// const resolvers = mySchema.resolvers
 const modifiedSchema = makeAugmentedSchema({
   typeDefs: fs
     .readFileSync(path.join(__dirname, "./schema.graphql"))
     .toString(),
   config: {
-    query: true, // default
+    query: true,
     mutation: false,
   },
 });
@@ -24,8 +23,6 @@ const driver = neo4j.driver(
   neo4j.auth.basic("neo4j", "letmein")
 );
 
-// Leaving both types of servers in until json has been entirely moved over into neo4j
-//  Neo4J
 const server = new ApolloServer({
   schema: modifiedSchema,
   context: { driver },
