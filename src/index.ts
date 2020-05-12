@@ -29,10 +29,16 @@ const driver = neo4j.driver(
 const server = new ApolloServer({
   schema: modifiedSchema,
   context: { driver },
+  introspection: true,
+  playground: true,
+  subscriptions: false,
 });
 
 const app = express();
 app.use(cors());
+app.get("/", (req, res) => {
+  res.redirect("/graphql");
+});
 app.use("/voyager", voyagerMiddleware({ endpointUrl: "/graphql" }));
 server.applyMiddleware({ app });
 
