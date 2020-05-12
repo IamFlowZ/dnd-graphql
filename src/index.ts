@@ -36,6 +36,6 @@ app.use(cors());
 app.use("/voyager", voyagerMiddleware({ endpointUrl: "/graphql" }));
 server.applyMiddleware({ app });
 
-app.listen({ port: 80 }, () => {
+app.listen({ port: process.env.PORT || 4000 }, () => {
   console.log("Listening on port 4000");
 });
