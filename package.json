@@ -21,7 +21,8 @@
     "graphql": "^14.5.8",
     "graphql-voyager": "^1.0.0-rc.28",
     "neo4j-driver": "^4.0.1",
-    "neo4j-graphql-js": "^2.11.4"
+    "neo4j-graphql-js": "^2.11.4",
+    "nodemon": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -37,7 +38,6 @@
     "eslint-plugin-jest": "^23.2.0",
     "eslint-plugin-node": "^11.0.0",
     "jest": "^25.1.0",
-    "nodemon": "^2.0.2",
     "ts-node": "^8.5.4",
     "typescript": "^3.8.0"
   }
