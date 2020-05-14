@@ -11,17 +11,17 @@ import weaponProperties from "./seeds/weaponProperties.seed";
 import currencies from "./seeds/currency.seed";
 
 (async () => {
-  // await abilityAndSkills();
-  // await classes();
-  // await conditionSeed();
-  // await langsAndRaces();
-  // await weaponProperties();
-  // await dmgTypes();
-  // await profs();
-  // await subclass();
-  // await subrace();
-  // await trait();
-  // await currencies();
+  await abilityAndSkills();
+  await classes();
+  await conditionSeed();
+  await langsAndRaces();
+  await weaponProperties();
+  await dmgTypes();
+  await profs();
+  await subclass();
+  await subrace();
+  await trait();
+  await currencies();
 })().then((res) => console.log("done"));
 
 console.log(
