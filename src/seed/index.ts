@@ -17,7 +17,8 @@ const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
 
 const driver = neo4j.driver(
   graphenedbURL,
-  neo4j.auth.basic(graphenedbUser, graphenedbPass)
+  neo4j.auth.basic(graphenedbUser, graphenedbPass),
+  { encrypted: true}
 );
 
 (async () => {
