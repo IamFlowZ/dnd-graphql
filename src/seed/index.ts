@@ -21,6 +21,8 @@ const driver = neo4j.driver(
 );
 
 (async () => {
+  const conTest = await driver.verifyConnectivity()
+  console.log(conTest)
   await abilityAndSkills(driver);
   await classes(driver);
   await conditionSeed(driver);
