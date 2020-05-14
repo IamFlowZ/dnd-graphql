@@ -34,7 +34,7 @@ const driver = neo4j.driver(
   await subrace(driver);
   await trait(driver);
   await currencies(driver);
-})().then((res) => console.log("done"));
+})().then((res) => console.log("done")).catch(err => console.error(err))
 
 console.log(
   "call the functions of the information you would like to seed here.\n",
