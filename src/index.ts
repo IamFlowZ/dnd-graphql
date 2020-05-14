@@ -1,12 +1,19 @@
 import * as fs from "fs";
 import * as path from "path";
 
+import {config} from "dotenv"
 import express from "express";
 import cors from "cors";
 import { express as voyagerMiddleware } from "graphql-voyager/middleware";
 import { ApolloServer } from "apollo-server-express";
 import { makeAugmentedSchema } from "neo4j-graphql-js";
 import neo4j from "neo4j-driver";
+
+config()
+
+const graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
 
 const modifiedSchema = makeAugmentedSchema({
   typeDefs: fs
@@ -19,8 +26,8 @@ const modifiedSchema = makeAugmentedSchema({
 });
 
 const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass)
 );
 
 const server = new ApolloServer({
