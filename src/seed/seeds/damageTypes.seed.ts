@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const createDmgType = `CREATE (a:DamageType{name:$name, description: $desc})`;
 const dmgTypes = JSON.parse(
   fs
@@ -15,7 +8,7 @@ const dmgTypes = JSON.parse(
     .toString()
 );
 
-async function createDmgTypes() {
+async function createDmgTypes(driver) {
   const createDamages = await dmgTypes.map(async (dmgType) => {
     const session = driver.session();
     await session.run(createDmgType, {

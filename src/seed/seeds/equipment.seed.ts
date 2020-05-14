@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const categories = JSON.parse(
   fs
     .readFileSync(path.join(__dirname, "../sources/EquipmentCategories.json"))
@@ -30,7 +23,7 @@ All equipment is guaranteed to have a name. After that, all other properties are
 */
 // need to map the subcategories to figure out what properties they, so I can write queries that contain the right properties.
 
-async function createEquipment() {
+async function createEquipment(driver) {
   const createEquipment = categories.map(async (category) => {
     const fullEquipmentList = category.equipment.map(
       (item) => equipment.filter((fullItem) => fullItem.name === item.name)[0]

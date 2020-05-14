@@ -9,19 +9,29 @@ import subrace from "./seeds/subraces.seed";
 import trait from "./seeds/traits.seed";
 import weaponProperties from "./seeds/weaponProperties.seed";
 import currencies from "./seeds/currency.seed";
+import neo4j from "neo4j-driver";
+
+const graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
+
+const driver = neo4j.driver(
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass)
+);
 
 (async () => {
-  await abilityAndSkills();
-  await classes();
-  await conditionSeed();
-  await langsAndRaces();
-  await weaponProperties();
-  await dmgTypes();
-  await profs();
-  await subclass();
-  await subrace();
-  await trait();
-  await currencies();
+  await abilityAndSkills(driver);
+  await classes(driver);
+  await conditionSeed(driver);
+  await langsAndRaces(driver);
+  await weaponProperties(driver);
+  await dmgTypes(driver);
+  await profs(driver);
+  await subclass(driver);
+  await subrace(driver);
+  await trait(driver);
+  await currencies(driver);
 })().then((res) => console.log("done"));
 
 console.log(

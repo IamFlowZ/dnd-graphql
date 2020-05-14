@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const createSkill = `
 CREATE (b: Skill {
     name: $skillName,
@@ -42,7 +35,7 @@ const skills = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Skills.json")).toString()
 );
 
-async function createAbilities() {
+async function createAbilities(driver) {
   const createScores = abilityScores.map(async (abilityScore) => {
     const session = driver.session();
     await session.run(createAbilityScore, {

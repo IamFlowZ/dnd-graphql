@@ -1,10 +1,3 @@
-import neo4j from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const currencies = [
   {
     name: "Copper",
@@ -53,7 +46,7 @@ const currencies = [
   },
 ];
 
-async function createCurrency() {
+async function createCurrency(driver) {
   const creation = currencies.map(async (currency) => {
     const session = driver.session();
     await session.run("CREATE (a:Currency{name:$name})", {

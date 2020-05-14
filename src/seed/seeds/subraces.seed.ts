@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const subraces = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Subraces.json")).toString()
 );
@@ -29,7 +22,7 @@ WHERE b.name IN $languages
 CREATE (a) - [:SPEAKS] -> (b)
 `;
 
-async function createSubraces() {
+async function createSubraces(driver) {
   const createSubraces = await subraces.map(async (subrace) => {
     const session = driver.session();
     await session.run(CREATE_SUBRACE, {

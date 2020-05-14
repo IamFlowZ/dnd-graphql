@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const proficiencies = JSON.parse(
   fs
     .readFileSync(path.join(__dirname, "../sources/Proficiencies.json"))
@@ -23,7 +16,7 @@ WITH b, CASE WHEN ['Race', 'Class'] IN LABELS(b)
 CREATE (b) - [:HAS_PROF] -> (a)
 `;
 
-function createProficiencies() {
+function createProficiencies(driver) {
   const createProfs = proficiencies.map((prof) => {
     if (!(prof.type === "Skills" || prof.type === "Saving Throws")) {
       const session = driver.session();

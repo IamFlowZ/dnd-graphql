@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const races = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Races.json")).toString()
 );
@@ -15,7 +8,7 @@ const languages = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Languages.json")).toString()
 );
 
-async function createLanguages() {
+async function createLanguages(driver) {
   const createScripts = await languages
     .reduce((accu, curr) => {
       if (curr.script.length && !accu.includes(curr.script))

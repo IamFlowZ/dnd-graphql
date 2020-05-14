@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import neo4j, { session } from "neo4j-driver";
-
-const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic("neo4j", "letmein")
-);
-
 const subclasses = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Subclasses.json")).toString()
 );
@@ -19,7 +12,7 @@ CREATE (b:Subclass{name:$name, flavor:$flavor, description:$desc}),
 	(b) - [:SUBCLASS_OF] -> (a)
 `;
 
-async function createSubclasses() {
+async function createSubclasses(driver) {
   const createSubclasses = await subclasses.map(async (subclass) => {
     const session = driver.session();
     await session.run(CREATE_SUBCLASS, {
