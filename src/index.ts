@@ -32,6 +32,14 @@ const driver = neo4j.driver(
 );
 
 const server = new ApolloServer({
+  formatResponse: (resp) => {
+    console.log("got a request");
+    return resp;
+  },
+  formatError: (err) => {
+    console.error(err);
+    return err;
+  },
   schema: modifiedSchema,
   context: { driver },
   introspection: true,
