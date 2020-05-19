@@ -1,5 +1,17 @@
 import fs from "fs";
 import path from "path";
+import neo4j from "neo4j-driver";
+
+const graphenedbURL =
+  process.env.GRAPHENEDB_BOLT_URL || "bolt://localhost:7687";
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER || "neo4j";
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD || "letmein";
+
+const driver = neo4j.driver(
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass),
+  { encrypted: process.env.NODE_ENV === "production" }
+);
 
 const createWeaponProperty = `CREATE (a:WeaponProperty{name:$name, description: $desc}) return a;`;
 const props = JSON.parse(
@@ -8,7 +20,7 @@ const props = JSON.parse(
     .toString()
 );
 
-async function createWeaponProps(driver) {
+async function createWeaponProps() {
   const createProps = await props.map(async (property) => {
     const session = driver.session();
     await session.run(createWeaponProperty, { ...property });

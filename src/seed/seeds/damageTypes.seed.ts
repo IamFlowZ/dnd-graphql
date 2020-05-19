@@ -1,5 +1,17 @@
 import fs from "fs";
 import path from "path";
+import neo4j from "neo4j-driver";
+
+const graphenedbURL =
+  process.env.GRAPHENEDB_BOLT_URL || "bolt://localhost:7687";
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER || "neo4j";
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD || "letmein";
+
+const driver = neo4j.driver(
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass),
+  { encrypted: process.env.NODE_ENV === "production" }
+);
 
 const createDmgType = `CREATE (a:DamageType{name:$name, description: $desc})`;
 const dmgTypes = JSON.parse(
@@ -8,7 +20,7 @@ const dmgTypes = JSON.parse(
     .toString()
 );
 
-async function createDmgTypes(driver) {
+async function createDmgTypes() {
   const createDamages = await dmgTypes.map(async (dmgType) => {
     const session = driver.session();
     await session.run(createDmgType, {

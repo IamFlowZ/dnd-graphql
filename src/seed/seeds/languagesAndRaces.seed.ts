@@ -1,5 +1,17 @@
 import fs from "fs";
 import path from "path";
+import neo4j from "neo4j-driver";
+
+const graphenedbURL =
+  process.env.GRAPHENEDB_BOLT_URL || "bolt://localhost:7687";
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER || "neo4j";
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD || "letmein";
+
+const driver = neo4j.driver(
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass),
+  { encrypted: process.env.NODE_ENV === "production" }
+);
 
 const races = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Races.json")).toString()
@@ -8,7 +20,7 @@ const languages = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Languages.json")).toString()
 );
 
-async function createLanguages(driver) {
+async function createLanguages() {
   const createScripts = await languages
     .reduce((accu, curr) => {
       if (curr.script.length && !accu.includes(curr.script))

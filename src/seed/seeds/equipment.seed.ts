@@ -1,5 +1,17 @@
 import fs from "fs";
 import path from "path";
+import neo4j from "neo4j-driver";
+
+const graphenedbURL =
+  process.env.GRAPHENEDB_BOLT_URL || "bolt://localhost:7687";
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER || "neo4j";
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD || "letmein";
+
+const driver = neo4j.driver(
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass),
+  { encrypted: process.env.NODE_ENV === "production" }
+);
 
 const categories = JSON.parse(
   fs
@@ -23,7 +35,7 @@ All equipment is guaranteed to have a name. After that, all other properties are
 */
 // need to map the subcategories to figure out what properties they, so I can write queries that contain the right properties.
 
-async function createEquipment(driver) {
+async function createEquipment() {
   const createEquipment = categories.map(async (category) => {
     const fullEquipmentList = category.equipment.map(
       (item) => equipment.filter((fullItem) => fullItem.name === item.name)[0]

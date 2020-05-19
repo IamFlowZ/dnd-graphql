@@ -1,5 +1,17 @@
 import fs from "fs";
 import path from "path";
+import neo4j from "neo4j-driver";
+
+const graphenedbURL =
+  process.env.GRAPHENEDB_BOLT_URL || "bolt://localhost:7687";
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER || "neo4j";
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD || "letmein";
+
+const driver = neo4j.driver(
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass),
+  { encrypted: process.env.NODE_ENV === "production" }
+);
 
 const createCondition = `
 CREATE (a:Condition {
@@ -12,7 +24,7 @@ const conditions = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../sources/Conditions.json")).toString()
 );
 
-async function createConditions(driver) {
+async function createConditions() {
   const createConditions = conditions.map(async (condition) => {
     const session = driver.session();
     await session.run(createCondition, {

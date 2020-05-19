@@ -9,40 +9,26 @@ import subrace from "./seeds/subraces.seed";
 import trait from "./seeds/traits.seed";
 import weaponProperties from "./seeds/weaponProperties.seed";
 import currencies from "./seeds/currency.seed";
-import neo4j from "neo4j-driver";
-
-const graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
-const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
-const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
-
-const driver = neo4j.driver(
-  graphenedbURL,
-  neo4j.auth.basic(graphenedbUser, graphenedbPass),
-  { encrypted: true }
-);
 
 (async () => {
-  const conTest = await driver.verifyConnectivity();
-  console.log(conTest);
-  const session = driver.session();
-  session
-    .run("MATCH (a) RETURN a;")
-    .then((stuff) => console.log(stuff))
-    .catch((err) => console.error(err));
-  await abilityAndSkills(driver);
-  await classes(driver);
-  await conditionSeed(driver);
-  await langsAndRaces(driver);
-  await weaponProperties(driver);
-  await dmgTypes(driver);
-  await profs(driver);
-  await subclass(driver);
-  await subrace(driver);
-  await trait(driver);
-  await currencies(driver);
+  await abilityAndSkills();
+  await classes();
+  await conditionSeed();
+  await langsAndRaces();
+  await weaponProperties();
+  await dmgTypes();
+  await profs();
+  await subclass();
+  await subrace();
+  await trait();
+  await currencies();
 })()
-  .then((res) => console.log("done"))
-  .catch((err) => console.error(err));
+  .then(async (res) => {
+    console.log("done");
+  })
+  .catch(async (err) => {
+    console.error(err);
+  });
 
 console.log(
   "call the functions of the information you would like to seed here.\n",

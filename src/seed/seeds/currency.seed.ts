@@ -1,3 +1,16 @@
+import neo4j from "neo4j-driver";
+
+const graphenedbURL =
+  process.env.GRAPHENEDB_BOLT_URL || "bolt://localhost:7687";
+const graphenedbUser = process.env.GRAPHENEDB_BOLT_USER || "neo4j";
+const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD || "letmein";
+
+const driver = neo4j.driver(
+  graphenedbURL,
+  neo4j.auth.basic(graphenedbUser, graphenedbPass),
+  { encrypted: process.env.NODE_ENV === "production" }
+);
+
 const currencies = [
   {
     name: "Copper",
@@ -46,7 +59,7 @@ const currencies = [
   },
 ];
 
-async function createCurrency(driver) {
+async function createCurrency() {
   const creation = currencies.map(async (currency) => {
     const session = driver.session();
     await session.run("CREATE (a:Currency{name:$name})", {
