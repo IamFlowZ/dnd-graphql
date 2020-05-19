@@ -1,0 +1,335 @@
+"_id","_labels","color","description","flavor","hitDie","name","shortName","type","_start","_end","_type","rate"
+"0",":Race","","","","","Dragonborn","","",,,,
+"1",":Race","","","","","Gnome","","",,,,
+"2",":Race","","","","","Human","","",,,,
+"3",":Race","","","","","Halfling","","",,,,
+"4",":Race","","","","","Dwarf","","",,,,
+"5",":Race","","","","","Half-Elf","","",,,,
+"6",":Race","","","","","Tiefling","","",,,,
+"7",":Race","","","","","Half-Orc","","",,,,
+"8",":WeaponProperty","","[""A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.""]","","","Light","","",,,,
+"9",":WeaponProperty","","[""This weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for opportunity attacks with it.""]","","","Reach","","",,,,
+"10",":WeaponProperty","","[""Small creatures have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small creature to use effectively.""]","","","Heavy","","",,,,
+"11",":WeaponProperty","","[""Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.""]","","","Loading","","",,,,
+"12",":Person","","","","","Scott","","",,,,
+"13",":Person","","","","","Jill","","",,,,
+"14",":Person","","","","","Bob","","",,,,
+"15",":Car","Black","","","","Mustang","","",,,,
+"16",":Car","Red","","","","Volvo","","",,,,
+"17",":WeaponProperty","","[""This weapon requires two hands when you attack with it.""]","","","Two-Handed","","",,,,
+"18",":WeaponProperty","","[""If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.""]","","","Thrown","","",,,,
+"19",":WeaponProperty","","[""When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.""]","","","Finesse","","",,,,
+"20",":WeaponProperty","","[""A weapon with the special property has unusual rules governing its use, explained in the weapon's description (see \"Special Weapons\" later in this section).""]","","","Special","","",,,,
+"21",":Currency","","","","","Gold","","",,,,
+"22",":Currency","","","","","Silver","","",,,,
+"23",":Currency","","","","","Electrum","","",,,,
+"24",":Currency","","","","","Copper","","",,,,
+"25",":Currency","","","","","Platinum","","",,,,
+"57",":WeaponProperty","","[""Monks gain several benefits while unarmed or wielding only monk weapons while they aren't wearing armor or wielding shields.""]","","","Monk","","",,,,
+"89",":WeaponProperty","","[""This weapon can be used with one or two hands. A damage value in parentheses appears with the property--the damage when the weapon is used with two hands to make a melee attack.""]","","","Versatile","","",,,,
+"90",":WeaponProperty","","[""You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon)."",""At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield. If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon (see \"Improvised Weapons\" later in the section). A sling must be loaded to deal any damage when used in this way.""]","","","Ammunition","","",,,,
+"95",":DamageType","","Blunt force attacks, falling, constriction, and the like deal bludgeoning damage.","","","Bludgeoning","","",,,,
+"96",":DamageType","","The infernal chill radiating from an ice devil's spear and the frigid blast of a white dragon's breath deal cold damage.","","","Cold","","",,,,
+"97",":DamageType","","The corrosive spray of a black dragon's breath and the dissolving enzymes secreted by a black pudding deal acid damage.","","","Acid","","",,,,
+"98",":DamageType","","Force is pure magical energy focused into a damaging form. Most effects that deal force damage are spells, including magic missile and spiritual weapon.","","","Force","","",,,,
+"99",":DamageType","","A lightning bolt spell and a blue dragon's breath deal lightning damage.","","","Lightning","","",,,,
+"100",":DamageType","","Puncturing and impaling attacks, including spears and monsters' bites, deal piercing damage.","","","Piercing","","",,,,
+"101",":DamageType","","Mental abilities such as a psionic blast deal psychic damage.","","","Psychic","","",,,,
+"102",":DamageType","","Swords, axes, and monsters' claws deal slashing damage.","","","Slashing","","",,,,
+"103",":DamageType","","Venomous stings and the toxic gas of a green dragon's breath deal poison damage.","","","Poison","","",,,,
+"104",":DamageType","","Radiant damage, dealt by a cleric's flame strike spell or an angel's smiting weapon, sears the flesh like fire and overloads the spirit with power.","","","Radiant","","",,,,
+"105",":DamageType","","Necrotic damage, dealt by certain undead and a spell such as chill touch, withers matter and even the soul.","","","Necrotic","","",,,,
+"106",":DamageType","","Red dragons breathe fire, and many spells conjure flames to deal fire damage.","","","Fire","","",,,,
+"107",":DamageType","","A concussive burst of sound, such as the effect of the thunderwave spell, deals thunder damage.","","","Thunder","","",,,,
+"108",":Subclass","","[""Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.""]","Monastic Tradition","","Open Hand","","",,,,
+"109",":Subclass","","[""Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter's path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.""]","Ranger Archetype","","Hunter","","",,,,
+"110",":Subclass","","[""The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.""]","Druid Circle","","Land","","",,,,
+"111",":Subclass","","[""The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of their devotion. They hold angels--the perfect servants of good--as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.""]","Sacred Oath","","Devotion","","",,,,
+"112",":Subclass","","[""Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.""]","Sorcerous Origins","","Draconic","","",,,,
+"113",":Subclass","","[""Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tales. Whether singing folk ballads in taverns or elaborate compositions in royal courts, these bards use their gifts to hold audiences spellbound. When the applause dies down, the audience members might find themselves questioning everything they held to be true, from their faith in the priesthood of the local temple to their loyalty to the king. The loyalty of these bards lies in the pursuit of beauty and truth, not in fealty to a monarch or following the tenets of a deity. A noble who keeps such a bard as a herald or advisor knows that the bard would rather be honest than politic. The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.""]","Bard College","","Lore","","",,,,
+"114",":Subclass","","[""The Life domain focuses on the vibrant positive energy--one of the fundamental forces of the universe--that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities, sun gods, gods of healing or endurance, and gods of home and community.""]","Divine Domain","","Life","","",,,,
+"115",":Subclass","","[""You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.""]","Arcane Tradition","","Evocation","","",,,,
+"116",":Subclass","","[""The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.""]","Martial Archetype","","Champion","","",,,,
+"117",":Subclass","","[""You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.""]","Otherworldly Patron","","Fiend","","",,,,
+"118",":Subclass","","[""You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ.""]","Sorcerous Origins","","Thief","","",,,,
+"119",":Subclass","","[""For some barbarians, rage is a means to an end--that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.""]","Primal Path","","Berserker","","",,,,
+"120",":Subrace","","As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.","","","High Elf","","",,,,
+"121",":Subrace","","As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.","","","Lightfoot Halfling","","",,,,
+"122",":Subrace","","As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.","","","Hill Dwarf","","",,,,
+"123",":Subrace","","As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.","","","Rock Gnome","","",,,,
+"124",":Trait","","[""You can move through the space of any creature that is of a size larger than yours.""]","","","Halfling Nimbleness","","",,,,
+"125",":Trait","","[""You can speak, read, and write one extra language of your choice.""]","","","Extra Language","","",,,,
+"126",":Trait","","[""You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5h level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.""]","","","Internal Legacy","","",,,,
+"127",":Trait","","[""You have resistance to the damage type associated with your draconic ancestry.""]","","","Damage Resistance","","",,,,
+"128",":Trait","","[""You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.""]","","","Dwarven Combat Training","","",,,,
+"129",":Trait","","[""You have proficiency in the Perception skill.""]","","","Keen Senses","","",,,,
+"130",":Trait","","[""You have proficiency with the longsword, shortsword, shortbow, and longbow.""]","","","Elf Weapon Training","","",,,,
+"131",":Trait","","[""You have advantage on saving throws against being charmed, and magic cannot put you to sleep.""]","","","Fey Ancestry","","",,,,
+"132",":Trait","","[""You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.""]","","","Darkvision","","",,,,
+"133",":Trait","","[""Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep.""]","","","Trance","","",,,,
+"134",":Trait","","[""You have advantage on saving throws against poison, and you have resistance against poison damage.""]","","","Dwarven Resilience","","",,,,
+"135",":Trait","","[""You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.""]","","","Draconic Ancestry","","",,,,
+"136",":Trait","","[""When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.""]","","","Lucky","","",,,,
+"137",":Trait","","[""You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation."",""When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 2d6 at 6th level, 3d6 at 11th level, and 5d6 at 16th level."",""After you use your breath weapon, you cannot use it again until you complete a short or long rest.""]","","","Breath Weapon","","",,,,
+"138",":Trait","","[""You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it.""]","","","High Elf Cantrip","","",,,,
+"139",":Trait","","[""You gain proficiency in two skills of your choice.""]","","","Skill Versatility","","",,,,
+"140",":Trait","","[""You have advantage on saving throw against being frightened.""]","","","Brave","","",,,,
+"141",":Trait","","[""Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.""]","","","Dwarven Toughness","","",,,,
+"142",":Trait","","[""You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time."",""When you create a device, choose one of the following options:"",""Clockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents."",""Fire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action."",""Music Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.""]","","","Tinker","","",,,,
+"143",":Trait","","[""Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.""]","","","Stonecunning","","",,,,
+"144",":Trait","","[""When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.""]","","","Savage Attacks","","",,,,
+"145",":Trait","","[""You have resistance to fire damage.""]","","","Hellish Resistance","","",,,,
+"146",":Trait","","[""You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.""]","","","Naturally Stealthy","","",,,,
+"147",":Trait","","[""You gain proficiency in the Intimidation skill.""]","","","Menacing","","",,,,
+"148",":Trait","","[""When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.""]","","","Relentless Endurance","","",,,,
+"149",":Trait","","[""You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.""]","","","Gnome Cunning","","",,,,
+"150",":Trait","","[""Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.""]","","","Artificer's Lore","","",,,,
+"151",":AbilityScore","","Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force. A Strength check can model any attempt to lift, push, pull, or break something, to force your body through a space, or to otherwise apply brute force to a situation. The Athletics skill reflects aptitude in certain kinds of Strength checks.","","","Strength","STR","",,,,
+"152",":AbilityScore","","Dexterity measures agility, reflexes, and balance. A Dexterity check can model any attempt to move nimbly, quickly, or quietly, or to keep from falling on tricky footing. The Acrobatics, Sleight of Hand, and Stealth skills reflect aptitude in certain kinds of Dexterity checks.","","","Dexterity","DEX","",,,,
+"153",":AbilityScore","","Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition. A Wisdom check might reflect an effort to read body language, understand someone's feelings, notice things about the environment, or care for an injured person. The Animal Handling, Insight, Medicine, Perception, and Survival skills reflect aptitude in certain kinds of Wisdom checks.","","","Wisdom","WIS","",,,,
+"154",":AbilityScore","","Intelligence measures mental acuity, accuracy of recall, and the ability to reason. An Intelligence check comes into play when you need to draw on logic, education, memory, or deductive reasoning. The Arcana, History, Investigation, Nature, and Religion skills reflect aptitude in certain kinds of Intelligence checks.","","","Intelligence","INT","",,,,
+"155",":AbilityScore","","Constitution measures health, stamina, and vital force. Constitution checks are uncommon, and no skills apply to Constitution checks, because the endurance this ability represents is largely passive rather than involving a specific effort on the part of a character or monster.","","","Constitution","CON","",,,,
+"156",":AbilityScore","","Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charming or commanding personality. A Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you are navigating a tricky social situation. The Deception, Intimidation, Performance, and Persuasion skills reflect aptitude in certain kinds of Charisma checks.","","","Charisma","CHA","",,,,
+"157",":Skill","","Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you're trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship's deck. The GM might also call for a Dexterity (Acrobatics) check to see if you can perform acrobatic stunts, including dives, rolls, somersaults, and flips.","","","Acrobatics","","",,,,
+"158",":Skill","","When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal's intentions, the GM might call for a Wisdom (Animal Handling) check. You also make a Wisdom (Animal Handling) check to control your mount when you attempt a risky maneuver.","","","Animal Handling","","",,,,
+"159",":Skill","","Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming.","","","Athletics","","",,,,
+"160",":Skill","","Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.","","","Arcana","","",,,,
+"161",":Skill","","Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast- talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone's suspicions with false assurances, or maintain a straight face while telling a blatant lie.","","","Deception","","",,,,
+"162",":Skill","","Your Intelligence (History) check measures your ability to recall lore about historical events, legendary people, ancient kingdoms, past disputes, recent wars, and lost civilizations.","","","History","","",,,,
+"163",":Skill","","Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some other form of entertainment.","","","Performance","","",,,,
+"164",":Skill","","Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move. Doing so involves gleaning clues from body language, speech habits, and changes in mannerisms.","","","Insight","","",,,,
+"165",":Skill","","When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make a Charisma (Intimidation) check. Examples include trying to pry information out of a prisoner, convincing street thugs to back down from a confrontation, or using the edge of a broken bottle to convince a sneering vizier to reconsider a decision.","","","Intimidation","","",,,,
+"166",":Skill","","Your Intelligence (Nature) check measures your ability to recall lore about terrain, plants and animals, the weather, and natural cycles.","","","Nature","","",,,,
+"167",":Skill","","The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, identify signs that owlbears live nearby, predict the weather, or avoid quicksand and other natural hazards.","","","Survival","","",,,,
+"168",":Skill","","When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a Charisma (Persuasion) check. Typically, you use persuasion when acting in good faith, to foster friendships, make cordial requests, or exhibit proper etiquette. Examples of persuading others include convincing a chamberlain to let your party see the king, negotiating peace between warring tribes, or inspiring a crowd of townsfolk.","","","Persuasion","","",,,,
+"169",":Skill","","When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You might deduce the location of a hidden object, discern from the appearance of a wound what kind of weapon dealt it, or determine the weakest point in a tunnel that could cause it to collapse. Poring through ancient scrolls in search of a hidden fragment of knowledge might also call for an Intelligence (Investigation) check.","","","Investigation","","",,,,
+"170",":Skill","","Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The GM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person's pocket.","","","Sleight of Hand","","",,,,
+"171",":Skill","","A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness.","","","Medicine","","",,,,
+"172",":Skill","","Your Intelligence (Religion) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults.","","","Religion","","",,,,
+"176",":Skill","","Your Wisdom (Perception) check lets you spot, hear, or otherwise detect the presence of something. It measures your general awareness of your surroundings and the keenness of your senses. For example, you might try to hear a conversation through a closed door, eavesdrop under an open window, or hear monsters moving stealthily in the forest. Or you might try to spot things that are obscured or easy to miss, whether they are orcs lying in ambush on a road, thugs hiding in the shadows of an alley, or candlelight under a closed secret door.","","","Perception","","",,,,
+"177",":Skill","","Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.","","","Stealth","","",,,,
+"178",":Class","","","","12","Barbarian","","",,,,
+"179",":Class","","","","10","Fighter","","",,,,
+"180",":Class","","","","8","Bard","","",,,,
+"181",":Class","","","","8","Cleric","","",,,,
+"182",":Class","","","","8","Monk","","",,,,
+"183",":Class","","","","8","Rogue","","",,,,
+"184",":Class","","","","10","Paladin","","",,,,
+"185",":Class","","","","6","Sorcerer","","",,,,
+"186",":Class","","","","8","Warlock","","",,,,
+"187",":Class","","","","6","Wizard","","",,,,
+"188",":Class","","","","10","Ranger","","",,,,
+"189",":Class","","","","8","Druid","","",,,,
+"190",":Condition","","A blinded creature can't see and automatically fails any ability check that requires sight. Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.","","","Blinded","","",,,,
+"191",":Condition","","A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight. The creature can't willingly move closer to the source of its fear.","","","Frightened","","",,,,
+"192",":Condition","","An unconscious creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings. The creature drops whatever it's holding and falls prone. The creature automatically fails Strength and Dexterity saving throws. Attack rolls against the creature have advantage. Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.","","","Unconscious","","",,,,
+"193",":Condition","","An incapacitated creature can't take actions or reactions.","","","Incapacitated","","",,,,
+"194",":Condition","","A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging. The creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings. Attack rolls against the creature have advantage. The creature automatically fails Strength and Dexterity saving throws. The creature has resistance to all damage. The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.","","","Petrified","","",,,,
+"195",":Condition","","A poisoned creature has disadvantage on attack rolls and ability checks.","","","Poisoned","","",,,,
+"196",":Condition","","A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects. The charmer has advantage on any ability check to interact socially with the creature.","","","Charmed","","",,,,
+"197",":Condition","","A paralyzed creature is incapacitated (see the condition) and can't move or speak. The creature automatically fails Strength and Dexterity saving throws. Attack rolls against the creature have advantage. Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.","","","Paralyzed","","",,,,
+"198",":Condition","","A stunned creature is incapacitated (see the condition), can't move, and can speak only falteringly. The creature automatically fails Strength and Dexterity saving throws. Attack rolls against the creature have advantage.","","","Stunned","","",,,,
+"199",":Condition","","A deafened creature can't hear and automatically fails any ability check that requires hearing.","","","Deafened","","",,,,
+"200",":Condition","","An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves. Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.","","","Invisible","","",,,,
+"201",":Condition","","A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed. The condition ends if the grappler is incapacitated (see the condition). The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the thunderwave spell.","","","Grappled","","",,,,
+"202",":Condition","","A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition. The creature has disadvantage on attack rolls. An attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.","","","Prone","","",,,,
+"203",":Condition","","Exhaustion is measured in six levels.","","","Exhaustion","","",,,,
+"204",":Condition","","A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed. Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage. The creature has disadvantage on Dexterity saving throws.","","","Restrained","","",,,,
+"212",":Script","","","","","Celestial","","",,,,
+"213",":Script","","","","","Draconic","","",,,,
+"214",":Script","","","","","Common","","",,,,
+"261",":Script","","","","","Elvish","","",,,,
+"262",":Script","","","","","Dwarvish","","",,,,
+"263",":Script","","","","","Infernal","","",,,,
+"264",":Language","","","","","Goblin","","Standard",,,,
+"288",":Language","","","","","Common","","Standard",,,,
+"289",":Language","","","","","Giant","","Standard",,,,
+"294",":Language","","","","","Elvish","","Standard",,,,
+"295",":Language","","","","","Dwarvish","","Standard",,,,
+"320",":Language","","","","","Halfling","","Standard",,,,
+"321",":Language","","","","","Gnomish","","Standard",,,,
+"323",":Language","","","","","Primordial","","Exotic",,,,
+"324",":Language","","","","","Undercommon","","Exotic",,,,
+"350",":Language","","","","","Celestial","","Exotic",,,,
+"351",":Language","","","","","Infernal","","Exotic",,,,
+"352",":Language","","","","","Deep Speech","","Exotic",,,,
+"353",":Language","","","","","Orcish","","Standard",,,,
+"354",":Language","","","","","Abyssal","","Exotic",,,,
+"355",":Language","","","","","Draconic","","Exotic",,,,
+"356",":Language","","","","","Sylvan","","Exotic",,,,
+"357",":Race","","","","","Elf","","",,,,
+,,,,,,,,,"295","262","HAS_SCRIPT",""
+,,,,,,,,,"6","351","SPEAKS",""
+,,,,,,,,,"357","288","SPEAKS",""
+,,,,,,,,,"1","321","SPEAKS",""
+,,,,,,,,,"4","288","SPEAKS",""
+,,,,,,,,,"357","294","SPEAKS",""
+,,,,,,,,,"0","355","SPEAKS",""
+,,,,,,,,,"7","353","SPEAKS",""
+,,,,,,,,,"5","288","SPEAKS",""
+,,,,,,,,,"4","295","SPEAKS",""
+,,,,,,,,,"6","288","SPEAKS",""
+,,,,,,,,,"5","294","SPEAKS",""
+,,,,,,,,,"2","288","SPEAKS",""
+,,,,,,,,,"3","288","SPEAKS",""
+,,,,,,,,,"1","288","SPEAKS",""
+,,,,,,,,,"3","320","SPEAKS",""
+,,,,,,,,,"7","288","SPEAKS",""
+,,,,,,,,,"0","288","SPEAKS",""
+,,,,,,,,,"182","108","HAS_SUBCLASS",""
+,,,,,,,,,"108","182","SUBCLASS_OF",""
+,,,,,,,,,"188","109","HAS_SUBCLASS",""
+,,,,,,,,,"109","188","SUBCLASS_OF",""
+,,,,,,,,,"189","110","HAS_SUBCLASS",""
+,,,,,,,,,"110","189","SUBCLASS_OF",""
+,,,,,,,,,"184","111","HAS_SUBCLASS",""
+,,,,,,,,,"111","184","SUBCLASS_OF",""
+,,,,,,,,,"185","112","HAS_SUBCLASS",""
+,,,,,,,,,"112","185","SUBCLASS_OF",""
+,,,,,,,,,"180","113","HAS_SUBCLASS",""
+,,,,,,,,,"113","180","SUBCLASS_OF",""
+,,,,,,,,,"181","114","HAS_SUBCLASS",""
+,,,,,,,,,"114","181","SUBCLASS_OF",""
+,,,,,,,,,"187","115","HAS_SUBCLASS",""
+,,,,,,,,,"115","187","SUBCLASS_OF",""
+,,,,,,,,,"179","116","HAS_SUBCLASS",""
+,,,,,,,,,"116","179","SUBCLASS_OF",""
+,,,,,,,,,"186","117","HAS_SUBCLASS",""
+,,,,,,,,,"117","186","SUBCLASS_OF",""
+,,,,,,,,,"183","118","HAS_SUBCLASS",""
+,,,,,,,,,"118","183","SUBCLASS_OF",""
+,,,,,,,,,"178","119","HAS_SUBCLASS",""
+,,,,,,,,,"119","178","SUBCLASS_OF",""
+,,,,,,,,,"3","121","HAS_SUBRACE",""
+,,,,,,,,,"357","120","HAS_SUBRACE",""
+,,,,,,,,,"120","357","SUBRACE_OF",""
+,,,,,,,,,"121","3","SUBRACE_OF",""
+,,,,,,,,,"4","122","HAS_SUBRACE",""
+,,,,,,,,,"122","4","SUBRACE_OF",""
+,,,,,,,,,"1","123","HAS_SUBRACE",""
+,,,,,,,,,"123","1","SUBRACE_OF",""
+,,,,,,,,,"3","124","HAS_TRAIT",""
+,,,,,,,,,"6","126","HAS_TRAIT",""
+,,,,,,,,,"0","127","HAS_TRAIT",""
+,,,,,,,,,"4","128","HAS_TRAIT",""
+,,,,,,,,,"357","129","HAS_TRAIT",""
+,,,,,,,,,"5","131","HAS_TRAIT",""
+,,,,,,,,,"1","132","HAS_TRAIT",""
+,,,,,,,,,"0","135","HAS_TRAIT",""
+,,,,,,,,,"4","132","HAS_TRAIT",""
+,,,,,,,,,"3","136","HAS_TRAIT",""
+,,,,,,,,,"357","130","HAS_TRAIT",""
+,,,,,,,,,"0","137","HAS_TRAIT",""
+,,,,,,,,,"7","144","HAS_TRAIT",""
+,,,,,,,,,"6","145","HAS_TRAIT",""
+,,,,,,,,,"3","140","HAS_TRAIT",""
+,,,,,,,,,"357","131","HAS_TRAIT",""
+,,,,,,,,,"7","147","HAS_TRAIT",""
+,,,,,,,,,"5","132","HAS_TRAIT",""
+,,,,,,,,,"357","133","HAS_TRAIT",""
+,,,,,,,,,"7","148","HAS_TRAIT",""
+,,,,,,,,,"7","132","HAS_TRAIT",""
+,,,,,,,,,"357","132","HAS_TRAIT",""
+,,,,,,,,,"4","134","HAS_TRAIT",""
+,,,,,,,,,"5","139","HAS_TRAIT",""
+,,,,,,,,,"1","149","HAS_TRAIT",""
+,,,,,,,,,"4","143","HAS_TRAIT",""
+,,,,,,,,,"12","13","FRIEND_OF",""
+,,,,,,,,,"13","14","FRIEND_OF",""
+,,,,,,,,,"12","15","DRIVES",""
+,,,,,,,,,"14","16","DRIVES",""
+,,,,,,,,,"13","15","DRIVES",""
+,,,,,,,,,"25","22","EXCHANGES_AT","0.01"
+,,,,,,,,,"25","24","EXCHANGES_AT","0.001"
+,,,,,,,,,"24","25","EXCHANGES_AT","1000"
+,,,,,,,,,"24","23","EXCHANGES_AT","50"
+,,,,,,,,,"22","25","EXCHANGES_AT","100"
+,,,,,,,,,"23","24","EXCHANGES_AT","0.02"
+,,,,,,,,,"21","23","EXCHANGES_AT","0.5"
+,,,,,,,,,"25","23","EXCHANGES_AT","0.05"
+,,,,,,,,,"23","25","EXCHANGES_AT","20"
+,,,,,,,,,"23","22","EXCHANGES_AT","0.2"
+,,,,,,,,,"22","23","EXCHANGES_AT","5"
+,,,,,,,,,"24","22","EXCHANGES_AT","10"
+,,,,,,,,,"22","24","EXCHANGES_AT","0.1"
+,,,,,,,,,"21","22","EXCHANGES_AT","0.1"
+,,,,,,,,,"24","21","EXCHANGES_AT","100"
+,,,,,,,,,"23","21","EXCHANGES_AT","2"
+,,,,,,,,,"21","24","EXCHANGES_AT","0.01"
+,,,,,,,,,"22","21","EXCHANGES_AT","10"
+,,,,,,,,,"25","21","EXCHANGES_AT","0.1"
+,,,,,,,,,"21","25","EXCHANGES_AT","10"
+,,,,,,,,,"156","161","HAS_SKILL",""
+,,,,,,,,,"153","167","HAS_SKILL",""
+,,,,,,,,,"167","153","ABILITY",""
+,,,,,,,,,"161","156","ABILITY",""
+,,,,,,,,,"153","171","HAS_SKILL",""
+,,,,,,,,,"171","153","ABILITY",""
+,,,,,,,,,"156","163","HAS_SKILL",""
+,,,,,,,,,"153","176","HAS_SKILL",""
+,,,,,,,,,"163","156","ABILITY",""
+,,,,,,,,,"176","153","ABILITY",""
+,,,,,,,,,"156","165","HAS_SKILL",""
+,,,,,,,,,"165","156","ABILITY",""
+,,,,,,,,,"156","168","HAS_SKILL",""
+,,,,,,,,,"168","156","ABILITY",""
+,,,,,,,,,"178","151","SAVES_WITH",""
+,,,,,,,,,"178","155","SAVES_WITH",""
+,,,,,,,,,"180","152","SAVES_WITH",""
+,,,,,,,,,"185","156","SAVES_WITH",""
+,,,,,,,,,"183","152","SAVES_WITH",""
+,,,,,,,,,"183","154","SAVES_WITH",""
+,,,,,,,,,"189","153","SAVES_WITH",""
+,,,,,,,,,"179","155","SAVES_WITH",""
+,,,,,,,,,"189","154","SAVES_WITH",""
+,,,,,,,,,"182","151","SAVES_WITH",""
+,,,,,,,,,"182","152","SAVES_WITH",""
+,,,,,,,,,"181","153","SAVES_WITH",""
+,,,,,,,,,"181","156","SAVES_WITH",""
+,,,,,,,,,"188","151","SAVES_WITH",""
+,,,,,,,,,"188","152","SAVES_WITH",""
+,,,,,,,,,"356","261","HAS_SCRIPT",""
+,,,,,,,,,"321","262","HAS_SCRIPT",""
+,,,,,,,,,"324","261","HAS_SCRIPT",""
+,,,,,,,,,"289","262","HAS_SCRIPT",""
+,,,,,,,,,"323","262","HAS_SCRIPT",""
+,,,,,,,,,"294","261","HAS_SCRIPT",""
+,,,,,,,,,"354","263","HAS_SCRIPT",""
+,,,,,,,,,"355","213","HAS_SCRIPT",""
+,,,,,,,,,"350","212","HAS_SCRIPT",""
+,,,,,,,,,"320","214","HAS_SCRIPT",""
+,,,,,,,,,"353","262","HAS_SCRIPT",""
+,,,,,,,,,"351","263","HAS_SCRIPT",""
+,,,,,,,,,"288","214","HAS_SCRIPT",""
+,,,,,,,,,"264","262","HAS_SCRIPT",""
+,,,,,,,,,"151","159","HAS_SKILL",""
+,,,,,,,,,"152","157","HAS_SKILL",""
+,,,,,,,,,"154","160","HAS_SKILL",""
+,,,,,,,,,"157","152","ABILITY",""
+,,,,,,,,,"159","151","ABILITY",""
+,,,,,,,,,"160","154","ABILITY",""
+,,,,,,,,,"154","162","HAS_SKILL",""
+,,,,,,,,,"162","154","ABILITY",""
+,,,,,,,,,"152","170","HAS_SKILL",""
+,,,,,,,,,"170","152","ABILITY",""
+,,,,,,,,,"154","166","HAS_SKILL",""
+,,,,,,,,,"166","154","ABILITY",""
+,,,,,,,,,"152","177","HAS_SKILL",""
+,,,,,,,,,"177","152","ABILITY",""
+,,,,,,,,,"154","169","HAS_SKILL",""
+,,,,,,,,,"169","154","ABILITY",""
+,,,,,,,,,"154","172","HAS_SKILL",""
+,,,,,,,,,"172","154","ABILITY",""
+,,,,,,,,,"153","158","HAS_SKILL",""
+,,,,,,,,,"158","153","ABILITY",""
+,,,,,,,,,"153","164","HAS_SKILL",""
+,,,,,,,,,"164","153","ABILITY",""
+,,,,,,,,,"184","153","SAVES_WITH",""
+,,,,,,,,,"179","151","SAVES_WITH",""
+,,,,,,,,,"185","155","SAVES_WITH",""
+,,,,,,,,,"184","156","SAVES_WITH",""
+,,,,,,,,,"186","153","SAVES_WITH",""
+,,,,,,,,,"186","156","SAVES_WITH",""
+,,,,,,,,,"187","153","SAVES_WITH",""
+,,,,,,,,,"180","156","SAVES_WITH",""
+,,,,,,,,,"187","154","SAVES_WITH",""

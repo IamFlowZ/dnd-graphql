@@ -18,12 +18,17 @@ const graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
 const driver = neo4j.driver(
   graphenedbURL,
   neo4j.auth.basic(graphenedbUser, graphenedbPass),
-  { encrypted: true}
+  { encrypted: true }
 );
 
 (async () => {
-  const conTest = await driver.verifyConnectivity()
-  console.log(conTest)
+  const conTest = await driver.verifyConnectivity();
+  console.log(conTest);
+  const session = driver.session();
+  session
+    .run(":dbs")
+    .then((stuff) => console.log(stuff))
+    .catch((err) => console.error(err));
   await abilityAndSkills(driver);
   await classes(driver);
   await conditionSeed(driver);
@@ -35,7 +40,9 @@ const driver = neo4j.driver(
   await subrace(driver);
   await trait(driver);
   await currencies(driver);
-})().then((res) => console.log("done")).catch(err => console.error(err))
+})()
+  .then((res) => console.log("done"))
+  .catch((err) => console.error(err));
 
 console.log(
   "call the functions of the information you would like to seed here.\n",
