@@ -26,7 +26,7 @@ const driver = neo4j.driver(
   console.log(conTest);
   const session = driver.session();
   session
-    .run("SELECT (a) RETURN a;")
+    .run("MATCH (a) RETURN a;")
     .then((stuff) => console.log(stuff))
     .catch((err) => console.error(err));
   await abilityAndSkills(driver);
