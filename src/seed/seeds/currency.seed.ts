@@ -87,5 +87,6 @@ async function createCurrency() {
     });
   });
   await Promise.all(exchanges).catch((err) => console.error(err));
+  await driver.close();
 }
 export default createCurrency;

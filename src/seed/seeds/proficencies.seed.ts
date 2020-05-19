@@ -28,15 +28,15 @@ WITH b, CASE WHEN ['Race', 'Class'] IN LABELS(b)
 CREATE (b) - [:HAS_PROF] -> (a)
 `;
 
-function createProficiencies() {
+async function createProficiencies() {
   const createProfs = proficiencies.map((prof) => {
     if (!(prof.type === "Skills" || prof.type === "Saving Throws")) {
       const session = driver.session();
       return session.run(createProf, { ...prof });
     }
   });
-  Promise.all(createProfs).catch((err) => console.error(err));
-  const relateProfs = proficiencies.map((prof) => {
+  await Promise.all(createProfs).catch((err) => console.error(err));
+  const relateProfs = proficiencies.map(async (prof) => {
     if (!(prof.type === "Skills" || prof.type === "Saving Throws")) {
       const classes = prof.classes.reduce((accu, curr, i) => {
         if (i === 0) {
@@ -68,6 +68,7 @@ function createProficiencies() {
       }
     }
   });
-  // Promise.all(relateProfs).catch(err => console.error(err));
+  // await Promise.all(relateProfs).catch(err => console.error(err));
+  await driver.close();
 }
 export default createProficiencies;

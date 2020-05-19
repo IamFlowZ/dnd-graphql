@@ -17,18 +17,14 @@ import currencies from "./seeds/currency.seed";
   await langsAndRaces();
   await weaponProperties();
   await dmgTypes();
-  await profs();
+  // await profs();
   await subclass();
   await subrace();
   await trait();
   await currencies();
 })()
-  .then(async (res) => {
-    console.log("done");
-  })
-  .catch(async (err) => {
-    console.error(err);
-  });
+  .then((res) => console.log("done"))
+  .catch((err) => console.error(err));
 
 console.log(
   "call the functions of the information you would like to seed here.\n",

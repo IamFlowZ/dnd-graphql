@@ -53,6 +53,7 @@ async function createEquipment() {
     });
   });
   await Promise.all(createEquipment).catch((err) => console.error(err));
+  await driver.close();
   return true;
 }
 

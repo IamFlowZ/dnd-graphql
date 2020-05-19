@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext .ts",
-    "start": "nodemon -e ts,graphql src/index.ts",
+    "start": "npm run seedDb; nodemon -e ts,graphql src/index.ts",
     "author": "npx dakotalewallen",
     "seedDb": "ts-node src/seed/index.ts"
   },
