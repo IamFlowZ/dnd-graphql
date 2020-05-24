@@ -1,10 +1,14 @@
-# DND 5e Graphql
+# DND 5e GraphQL Service
 
-Graphql service for Dungeon and Dragons 5th edition. A [GRANDStack](https://grandstack.io/) application. You can see the other half at [dnd-ui](https://github.com/IamFlowZ/dnd-ui)
+[5ednd.info](http://5ednd.info)
+
+GraphQL service for Dungeon and Dragons 5th edition. A [GRANDStack](https://grandstack.io/) application.
+Looking for contributors!! If you're interested let me know!
 
 # Prerequisites
 
 - Node 10.x>
+- Neo4j 4.x
 
 # Installing
 
@@ -51,4 +55,4 @@ DnD is pretty neat. Template for this readme comes from [PurpleBooth](https://gi
 
 # Notes
 
-Visualation of the goal for the datamodel available in the assets folder as well as a visualization of the current schema at \$url:4000/voyager
+Visualation of the goal for the datamodel available in the assets folder as well as a visualization of the current schema at /voyager
